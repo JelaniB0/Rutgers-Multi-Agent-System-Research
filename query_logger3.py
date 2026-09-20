@@ -74,7 +74,7 @@ def log_query(session_id, query, response, agents_invoked, agent_sources=None,
 
 
 def log_turn_metrics(session_id, research, *, routing_events=None, topology="star",
-                     phase="query", parsed_intent=None, model_config=None, filepath=CSV_LOG_FILE):
+                     phase="query", parsed_intent=None, model_config=None, academic_profile=None, filepath=CSV_LOG_FILE):
     """All attempted turns, including uploads/errors; no prompt/transcript content."""
     path = Path(filepath)
     path = path.with_name(path.stem + "_calls.jsonl")
@@ -84,6 +84,7 @@ def log_turn_metrics(session_id, research, *, routing_events=None, topology="sta
               for event in (routing_events or [])]
     record = dict(research, session_id=session_id, topology=topology, phase=phase,
                   parsed_intent=parsed_intent,
+                  academic_profile=academic_profile or {},
                   model_config=model_config or {},
                   timestamp=datetime.now().isoformat(timespec="seconds"),
                   routing_events=events)

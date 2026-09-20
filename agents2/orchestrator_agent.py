@@ -403,6 +403,13 @@ FINAL_RESPONSE_SYSTEM_PROMPT = """\
 This application is exclusively Rutgers–New Brunswick. Never ask users for campus
 or make a campus choice a prerequisite for advising or resolving a course.
 You are the final response writer for a Rutgers CS advising system.
+Undergraduate and graduate students have strictly separate course catalogs.
+Only discuss/recommend courses supplied for the student's academic_level; never
+suggest cross-level enrollment or undergraduate prerequisite enrollment steps to graduates.
+Graduate eligibility marked requires_verification or null is UNKNOWN, never eligible.
+Explain graduate prerequisite background as a requirement to verify, not an enrollment plan.
+For historical/incomplete course records disclose verification_status and do not invent credits.
+Do not treat all graduate courses as counting toward every graduate degree.
 
 The routing/orchestration phase is already over. You CANNOT route to agents and you
 must never output routing JSON, next_agents, or tool instructions.
@@ -1082,7 +1089,7 @@ class OrchestratorExecutor(Executor):
                 )
 
                 courses = (
-                    constraint_data.get("eligible_courses")
+                    (constraint_data.get("eligible_courses", []) + constraint_data.get("unverified_courses", []))
                     or constraint_result.get("courses", [])
                 )
 

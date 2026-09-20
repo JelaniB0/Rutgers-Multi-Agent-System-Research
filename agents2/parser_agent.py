@@ -26,6 +26,7 @@ from agent_framework.openai import OpenAIResponsesClient
 
 # Import shared data classes, parser agent uses orchestrator defined response structure, can access conversation state.
 from .shared_types import AgentResponse, ConversationState
+from .academic_profile import student_level, normalize_level
 
 class ParserAgent(ChatAgent):
     """
@@ -154,8 +155,20 @@ Always return valid JSON only — no preamble, no markdown fences.
         
         try:
            parsed_data = await self._llm_parse(query, state, thread)
+           reply_entities = parsed_data.setdefault("entities", {})
+           reply_level = normalize_level(reply_entities.get("academic_level")) or normalize_level(reply_entities.get("year"))
+           if reply_entities.get("graduate_program") in ("masters", "phd", "msds"):
+               reply_level = "graduate"
+           if reply_level:
+               reply_entities["academic_level"] = reply_level
            state.resume_clarification(parsed_data)
            state.enrich_parsed_query(parsed_data)
+           if (parsed_data.get("intent") in {"course_recommendation", "course_info", "prerequisite_check", "schedule_planning", "degree_requirements"}
+                   and not student_level(state) and not parsed_data.get("clarification_question")):
+               question = "Are you an undergraduate or a graduate student? If graduate, are you in a master's or Ph.D. program?"
+               state.request_clarification(parsed_data.get("effective_query", query), parsed_data, ["academic_level"], question)
+               parsed_data["clarification_question"] = question
+               parsed_data["needs_clarification"] = True
         #    print(f"[ParserAgent] Parsed - Intent: {parsed_data.get('intent')}, "
                 #   f"Confidence: {parsed_data.get('confidence'):.2f}")
            
@@ -223,7 +236,14 @@ Always return valid JSON only — no preamble, no markdown fences.
         Use replace for changes such as 'instead of AI, focus on systems', remove for
         explicit rejection, and add for additional interests. Empty replace clears a list.
         Preferences use difficulty_preference, gpa_priority, credit_hours,
-        time_constraints, year. New values overwrite old; null clears a preference.
+        time_constraints, year, academic_level, graduate_program. New values overwrite old; null clears a preference.
+        academic_level is undergraduate or graduate, only from explicit student status.
+        graduate_program is masters, phd, or msds when explicitly stated; otherwise null.
+        'First-year master's student' means graduate, not freshman. 'I want to graduate'
+        and 'I want to attend grad school' do not establish graduate status. A course
+        number or request for graduate courses does not establish student status.
+        Keep undergraduate and graduate catalogs strictly separate, even on request.
+        A bare 'graduate' or 'undergraduate' answers a pending academic_level question.
         Use difficulty_preference='light' for a lighter workload, replacing challenging.
         Career aspirations belong in goals. Do not extract transcript facts here.
         Resolve 'those', 'which two', 'the second one' using the latest relevant result
@@ -255,6 +275,8 @@ Always return valid JSON only — no preamble, no markdown fences.
         "entities": {{
             "target_course": null,
             "year": null,
+            "academic_level": null,
+            "graduate_program": null,
             "interests": [],
             "credit_hours": null,
             "career_path": null,

@@ -18,6 +18,7 @@ from agents2.transcript_agent import TranscriptAgent
 from agents2.constraint_agent import ConstraintAgent
 from agents2.shared_types import ConversationState
 from agents2.dag_builder import build_dag
+from agents2.graduate_graph import build_graduate_graph
 from agents2.azure_openai import ModelConfig, create_agent_client, get_azure_openai_settings
 from agents2.paths import COURSES_FILE, SCHEMA_FILE, DAG_FILE
 from agents2.pathway_search import pathways_for_transcript
@@ -95,7 +96,7 @@ class DataExecutor(Executor):
             courses = response.data.get("courses", [])
             await ctx.send_message(AgentResult(
                 message.user_query, message.parsed_data,
-                agent_name="data_fetch", data={"courses": courses},
+                agent_name="data_fetch", data=response.data,
                 conversation_state=message.conversation_state
             ))
 
@@ -109,13 +110,16 @@ class DataExecutor(Executor):
                 return
 
             results = []
+            lookup_errors = []
             for course_name in specific_courses:
                 response = await self.data_agent.lookup_course(course_name, message.conversation_state)
                 if response.success:
                     results.append(response.data)
+                else:
+                    lookup_errors.extend(response.errors or [])
 
             if not results:
-                await ctx.yield_output("I couldn't find that course. Please check the course name and try again.")
+                await ctx.yield_output(" ".join(lookup_errors) or "I couldn't find that course. Please check the course name and try again.")
                 return
 
             await ctx.send_message(AgentResult(
@@ -136,13 +140,16 @@ class DataExecutor(Executor):
                 return
 
             results = []
+            lookup_errors = []
             for target in targets:
                 response = await self.data_agent.lookup_course(target, message.conversation_state)
                 if response.success:
                     results.append(response.data)
+                else:
+                    lookup_errors.extend(response.errors or [])
 
             if not results:
-                await ctx.yield_output("I couldn't find those courses. Please check the course names and try again.")
+                await ctx.yield_output(" ".join(lookup_errors) or "I couldn't find those courses. Please check the course names and try again.")
                 return
 
             await ctx.send_message(AgentResult(
@@ -154,6 +161,14 @@ class DataExecutor(Executor):
 
     @staticmethod
     def _pathways(results, state):
+        from agents2.academic_profile import student_level, load_graduate_courses, graduate_check
+        if student_level(state) == "graduate":
+            catalog = {c["code"]: c for c in load_graduate_courses()}
+            return [{"target": result["course"], "status": "requires_verification", "plans": [],
+                     "conditional_plans": [], "eligible_to_explore": [], "shortest_proven": False,
+                     "requirements": graduate_check(catalog[result["course"]["code"]], state),
+                     "assumptions": ["Graduate prerequisite equivalencies and permissions need departmental verification. No automatic pathway is asserted; undergraduate courses are not offered as enrollment steps."]}
+                    for result in results if result.get("course", {}).get("code") in catalog]
         with DAG_FILE.open(encoding="utf-8") as stream:
             dag = json.load(stream)
         return [pathways_for_transcript(dag, result["course"]["code"], state.transcript_data)
@@ -232,7 +247,8 @@ class PlanningExecutor(Executor):
             from agents2.constraint_agent import ConstraintAgent as CA
             constraint_context = CA.summarize_for_prompt(constraint_data)
 
-        RANKING_FIELDS = {"code", "title", "description", "prerequisites", "credits", "topics", "constraint_check"}
+        RANKING_FIELDS = {"code", "title", "description", "prerequisites", "credits", "topics", "constraint_check",
+                          "academic_level", "recommendable", "allowed_programs", "verification_status", "prerequisite_status", "course_type"}
         courses_to_rank = [
             {k: v for k, v in c.items() if k in RANKING_FIELDS}
             for c in courses[:7]
@@ -406,6 +422,7 @@ async def main():
     try:
         with usage_scope(conversation_state, "startup.dag"):
             await build_dag(courses_path=str(COURSES_FILE), output_path=str(DAG_FILE))
+            build_graduate_graph()
         with usage_scope(conversation_state, "startup.index"):
             workflow, _ = build_workflow(chat_client, model_config)
     finally:
@@ -560,6 +577,8 @@ async def main():
             log_turn_metrics(session_id, conversation_state.inference_metrics.snapshot(),
                              routing_events=conversation_state.routing_events,
                              parsed_intent=conversation_state.last_intent,
+                             academic_profile={k: conversation_state.preferences.get(k)
+                                               for k in ("academic_level", "graduate_program")},
                              model_config=model_config.to_dict())
 
 

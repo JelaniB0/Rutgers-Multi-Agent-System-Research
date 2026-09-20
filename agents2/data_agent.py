@@ -3,6 +3,8 @@ Data Agent code, RAG yet for semantic search.
 """
 
 import json
+import hashlib
+from pathlib import Path
 from agent_framework import ChatAgent
 from agent_framework.openai import OpenAIResponsesClient
 from typing import Dict, List
@@ -18,6 +20,7 @@ from datetime import date
 from .shared_types import AgentResponse, ConversationState
 from .azure_openai import get_azure_openai_settings
 from .paths import COURSES_FILE, CHROMA_DIR
+from .academic_profile import allowed_course, course_level, student_level, load_graduate_courses
 
 class DataAgent(ChatAgent):
     """
@@ -65,16 +68,18 @@ class DataAgent(ChatAgent):
             model_name=settings.embedding_deployment,
         )
         instrument_embeddings(azure_embedfunc, settings.embedding_deployment)
+        fingerprint = hashlib.sha256(json.dumps(self.courses_data, sort_keys=True).encode()).hexdigest()[:16]
+        collection_name = "rutgers_courses_levels_v1_" + fingerprint
 
         try:
             collection = client.get_collection(
-                name = "rutgers_courses",
+                name = collection_name,
                 embedding_function=azure_embedfunc
             )
             # print("[DataAgent] using existing embedding collection.")
         except NotFoundError:
             collection = client.create_collection(
-                name="rutgers_courses",
+                name=collection_name,
                 embedding_function=azure_embedfunc,
                 metadata={
                     "hnsw:space": "cosine", # don't know what this does necessarily
@@ -87,7 +92,7 @@ class DataAgent(ChatAgent):
 
     def _index_courses(self):
         """Courses indexed into vector database"""
-        if self.vector_db.count() > 0:
+        if self.vector_db.count() == len(self.courses_data):
             # print(f"[DataAgent] Vector DB already contains {self.vector_db.count()} courses")
             return
         
@@ -104,13 +109,15 @@ class DataAgent(ChatAgent):
                 "code": course.get('code', ''),
                 "title": course.get('title', ''),
                 "credits": str(course.get('credits', '3')),
-                "level": self._extract_course_level(course.get('code', ''))
+                "level": self._extract_course_level(course.get('code', '')),
+                "academic_level": course_level(course) or "unknown",
+                "recommendable": course.get("recommendable", True),
             })
             
             ids.append(course.get('code', f"course_{len(ids)}"))
 
 
-        self.vector_db.add(
+        self.vector_db.upsert(
             documents=documents,
             metadatas=metadatas,
             ids=ids
@@ -136,7 +143,7 @@ class DataAgent(ChatAgent):
     
     def _extract_course_level(self, course_code: str) -> str:
         """Extract course level from code"""
-        match = re.search(r':(\d{3}):', course_code)
+        match = re.search(r':(\d{3})$', course_code)
         if match:
             level = int(match.group(1))
             if level < 200:
@@ -171,6 +178,10 @@ class DataAgent(ChatAgent):
                     courses = data['courses']
                 else:
                     courses = []
+                for course in courses:
+                    course.setdefault("academic_level", course_level(course))
+                if Path(self.courses_file).resolve() == COURSES_FILE.resolve():
+                    courses.extend(load_graduate_courses())
                 # Build lookup map once at load time
                 self.code_to_title = {c["code"]: c["title"] for c in courses}
                 return courses
@@ -193,6 +204,10 @@ class DataAgent(ChatAgent):
         try:
             entities = parsed_data.get('entities', {})
             intent = parsed_data.get('intent', 'course_recommendation')
+            level = student_level(state, entities)
+            if not level:
+                return AgentResponse(success=False, errors=["Please specify undergraduate or graduate student status."], requires_user_input=True)
+            entities = dict(entities, academic_level=level)
 
             # print(f"[DataAgent] Fetching courses for intent: {intent}")
             # print(f"[DataAgent] Entities: {entities}")
@@ -203,6 +218,7 @@ class DataAgent(ChatAgent):
                 matched_courses = [catalog[code] for code in codes if code in catalog]
             else:
                 matched_courses = await self._rag_retrieve(entities, intent)
+            matched_courses = [c for c in matched_courses if allowed_course(c, state, recommendations=True, entities=entities)]
 
             # filter out courses already taken or in progress based on transcript data in conversation state. 
             if state.transcript_data:
@@ -223,7 +239,7 @@ class DataAgent(ChatAgent):
                 if any(k in (state.user_query or "").lower() for k in ["next", "spring", "fall", "summer", "winter", "this sem"]):
                     state.resolved_semester = semester
                     
-            offered = await self._fetch_soc_courses(semester)
+            offered = await self._fetch_soc_courses(semester, level)
             if offered is not None and len(offered) > 0:
                 before = len(matched_courses)
                 matched_courses = [
@@ -235,6 +251,7 @@ class DataAgent(ChatAgent):
             #     print(f"[DataAgent] SOC returned no courses for {semester} — schedule may not be posted yet, using fallback")
             # else:
             #     print(f"[DataAgent] SOC API unavailable — using full course list as fallback")
+            matched_courses = [dict(c, offered=True if offered else None) for c in matched_courses]
 
             return AgentResponse(
                 success=True,
@@ -242,7 +259,8 @@ class DataAgent(ChatAgent):
                     'courses': matched_courses,
                     'total_found': len(matched_courses),
                     'search_method': 'semantic',
-                    'semester': semester
+                    'semester': semester,
+                    'offering_status': 'verified' if offered else 'unknown'
                 },
                 metadata={ # metadata dictionary
                     'search_criteria': entities,
@@ -291,7 +309,7 @@ class DataAgent(ChatAgent):
         
         # builds metadata filters -> look into this later
         # where_filter = self._build_metadata_filters(entities)
-        where_filter = None
+        where_filter = {"$and": [{"academic_level": entities["academic_level"]}, {"recommendable": True}]}
 
         # retrieve courses from vector DB
         retrieval_results = self.vector_db.query(
@@ -309,7 +327,7 @@ class DataAgent(ChatAgent):
         retrieved_courses = []
         for i, code in enumerate(retrieved_course_codes):
             course = next((c for c in self.courses_data if c.get('code') == code), None)
-            if course:
+            if course and course_level(course) == entities["academic_level"] and course.get("recommendable", True):
                 course_copy = course.copy()
                 # semantic similarity score for planninn agent
                 course_copy['semantic_similarity'] = 1 - retrieved_distances[i]
@@ -365,61 +383,38 @@ class DataAgent(ChatAgent):
     
     async def lookup_course(self, course_identifier: str, state: ConversationState) -> AgentResponse:
         try:
-            normalized = course_identifier.strip().lower()
+            level = student_level(state)
+            if not level:
+                return AgentResponse(success=False, errors=["Please specify undergraduate or graduate student status."], requires_user_input=True)
+            catalog = [c for c in self.courses_data if allowed_course(c, state)]
+            normalized = course_identifier.strip().casefold()
+            full_code = re.search(r"\b\d{2}:\d{3}:\d{3}\b", normalized)
+            number = re.fullmatch(r"(?:cs\s*|198:)?(\d{3})", normalized)
+            if full_code:
+                matches = [c for c in catalog if c['code'] == full_code.group()]
+            elif number:
+                matches = [c for c in catalog if c['code'].split(':')[-1] == number.group(1)]
+            else:
+                matches = [c for c in catalog if c['title'].casefold() == normalized]
+                if not matches:
+                    result = self.vector_db.query(query_texts=[course_identifier], n_results=3,
+                                                  where={"academic_level": level})
+                    by_code = {c['code']: c for c in catalog}
+                    matches = [by_code[code] for code, distance in zip(result['ids'][0], result['distances'][0])
+                               if code in by_code and distance < 0.6]
+            if not matches:
+                return AgentResponse(success=False, errors=[
+                    f"No matching {level} course found. Undergraduate and graduate courses are kept separate."])
+            course = matches[0]
             semester = state.resolved_semester or self.resolve_semester(state.user_query or "")
-            offered = await self._fetch_soc_courses(semester)
+            offered = await self._fetch_soc_courses(semester, level)
+            return AgentResponse(success=True, data={
+                'course': self._enrich_course(course), 'lookup_method': 'scoped_lookup',
+                'offered': course['code'].split(':')[-1] in offered if offered else None,
+                'semester': semester}, metadata={'search_query': course_identifier, 'model_used': self.model})
+        except Exception as exc:
+            return AgentResponse(success=False, errors=[f"Course lookup error: {exc}"])
 
-            def check_offered(c):
-                num = c.get("code", "").split(":")[-1].strip()
-                return num in offered if offered else None
-
-            def make_result(course, method):
-                return AgentResponse(
-                    success=True,
-                    data={'course': self._enrich_course(course), 'lookup_method': method,
-                        'offered': check_offered(course), 'semester': semester},
-                    metadata={'search_query': course_identifier, 'model_used': self.model}
-                )
-
-            # 1. RAG first — handles typos, hyphens, paraphrasing
-            results = self.vector_db.query(query_texts=[course_identifier], n_results=3)
-            codes = results['ids'][0]
-            distances = results['distances'][0]
-
-            # print(f"[DEBUG RAG] distances for '{course_identifier}': {list(zip(codes, distances))}")
-
-            is_code_query = bool(re.search(r'\d{3}', course_identifier))
-            rag_threshold = 0.3 if is_code_query else 0.6
-
-            for code, dist in zip(codes, distances):
-                if dist < rag_threshold:
-                    course = next((c for c in self.courses_data if c.get('code') == code), None)
-                    if course:
-                        return make_result(course, 'rag_match')
-
-            # 2. Exact code match fallback — for cases like "198:314" or "01:198:314"
-            normalized_search = normalized.replace(' ', '').replace(':', '')
-            number_only = re.search(r'\d+', normalized_search)
-            for course in self.courses_data:
-                course_code = course.get('code', '').upper()
-                normalized_code = course_code.replace(' ', '').replace(':', '')
-                if (normalized in course_code.lower()
-                        or normalized_search in normalized_code
-                        or (number_only and number_only.group() in normalized_code.split(':')[-1])):
-                    return make_result(course, 'exact_code_match')
-
-            return AgentResponse(
-                success=False,
-                data={'attempted_search': course_identifier},
-                errors=[f"No course found matching '{course_identifier}'"]
-            )
-
-        except Exception as e:
-            import traceback
-            traceback.print_exc()
-            return AgentResponse(success=False, data=None, errors=[f"Course lookup error: {str(e)}"])
-                    
-                    
     def _build_search_query(self, entities: Dict) -> str:
         """Builds natural language query for vector search"""
         query_parts = []
@@ -459,17 +454,17 @@ class DataAgent(ChatAgent):
         """Extract and resolve prerequisites, clean up description."""
         course = course.copy()
         prereq_text, clean_desc = self._extract_prereqs(course.get("description", ""))
-        course["prerequisites"] = self._resolve_codes(prereq_text)
+        course["prerequisites"] = self._resolve_codes(prereq_text) if prereq_text else course.get("prerequisites", [])
         course["description"] = clean_desc
         return course
     
-    async def _fetch_soc_courses(self, semester: dict) -> set[str]:
+    async def _fetch_soc_courses(self, semester: dict, academic_level: str = "undergraduate") -> set[str]:
         """
         Fetcjes live offered CS course numbers from Rutgers SOC API for given semester. Caches results to avoid excessive requests and slower runtime due to collecting offered course data.
         Each run. 
         """
         now = time.time()
-        cache_key = f"{semester['term']}_{semester['year']}"  # e.g. "9_2026"
+        cache_key = f"{semester['term']}_{semester['year']}_{academic_level}"
 
         # cache hit — same semester and not stale
         cached = self.soc_cache.get(cache_key)
@@ -484,12 +479,16 @@ class DataAgent(ChatAgent):
                     "year": semester.get("year"),
                     "term":semester["term"],
                     "campus": "NB", # keep to rutgers nb only for now.
+                    "level": "G" if academic_level == "graduate" else "U",
                 })
                 resp.raise_for_status()
                 all_courses = resp.json()
 
                 offered = {
-                    str(c["courseNumber"]) for c in all_courses if str(c.get("subject", "")) == "198" and c.get("level") == "U"
+                    str(c["courseNumber"]).zfill(3) for c in all_courses
+                    if str(c.get("subject", "")) == "198"
+                    and c.get("level") == ("G" if academic_level == "graduate" else "U")
+                    and (not c.get("school") or str(c["school"]).zfill(2) == ("16" if academic_level == "graduate" else "01"))
                 }
 
                 self.soc_cache[cache_key] = {"courses": offered, "fetched_at": now}

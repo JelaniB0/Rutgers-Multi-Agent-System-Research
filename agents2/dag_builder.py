@@ -163,6 +163,10 @@ def check_eligibility(course_code: str, dag: Dict, completed: set, in_progress: 
         }
 
     node = dag[course_code]
+    if node.get("requires_verification"):
+        return {"eligible": False, "eligibility_status": "unknown",
+                "met_prerequisites": [], "unmet_prerequisites": ["Prerequisite rules require verification"],
+                "pathway_suggestion": "Verify the recorded requirements and any equivalents with the department."}
     and_reqs = node.get("and", [])
     or_groups = node.get("or_groups", [])
     requires_permission = node.get("requires_permission", False)

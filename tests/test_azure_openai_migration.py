@@ -170,7 +170,7 @@ class ResponsesMigrationTests(unittest.IsolatedAsyncioTestCase):
         ), patch(
             "agents2.data_agent.embedding_functions.OpenAIEmbeddingFunction"
         ) as embedding_function:
-            result = DataAgent._initialize_vector_db(SimpleNamespace())
+            result = DataAgent._initialize_vector_db(SimpleNamespace(courses_data=[]))
 
         self.assertIs(result, collection)
         embedding_function.assert_called_once_with(

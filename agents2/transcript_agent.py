@@ -29,7 +29,9 @@ class TranscriptAgent(ChatAgent):
             "student_id": "123456789",
             "cumulative_gpa": 3.74,
             "total_degree_credits": 91.0,
-            "year_standing": "Freshman|Sophomore|Junior|Senior",
+            "year_standing": "Freshman|Sophomore|Junior|Senior|Graduate|Unknown",
+            "academic_level": null,
+            "graduate_program": null,
             "completed_courses": [
                 {
                     "code": "01:198:112",
@@ -68,7 +70,11 @@ class TranscriptAgent(ChatAgent):
         - total_degree_credits: use the LAST degree credits earned value
         - completed_courses: only courses with a letter grade (A, B+, etc.) or PA/P
         - in_progress_courses: current semester courses with no grade yet
-        - year_standing: infer from total_degree_credits (<30 Freshman, <60 Sophomore, <90 Junior, 90+ Senior)
+        - academic_level: undergraduate or graduate only from explicit enrollment/program information; otherwise null.
+        - graduate_program: masters, phd, or msds only when explicitly identified; otherwise null.
+        - Do not infer current graduate status from a graduate course or an old undergraduate degree.
+        - year_standing: Graduate for a graduate program. Only for confirmed undergraduate programs,
+          infer from credits (<30 Freshman, <60 Sophomore, <90 Junior, 90+ Senior); otherwise Unknown.
         - ignore 0-credit duplicate lab lines
         - ignore stray single letters or watermark artifacts in the text
         """

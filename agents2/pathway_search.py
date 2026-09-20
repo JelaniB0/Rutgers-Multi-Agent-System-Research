@@ -45,7 +45,8 @@ def search_pathways(dag, target, completed=(), in_progress=(), *,
         stack.extend((dep, False) for dep in sorted(dependencies(code), reverse=True))
 
     def ready(code, done):
-        if code not in dag or dag[code].get("requires_permission", False):
+        if (code not in dag or dag[code].get("requires_permission", False)
+                or dag[code].get("requires_verification", False)):
             return False
         node = dag[code]
         return set(node.get("and", [])) <= done and all(

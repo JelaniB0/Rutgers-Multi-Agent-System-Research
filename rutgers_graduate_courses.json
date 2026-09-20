@@ -1,0 +1,1594 @@
+[
+  {
+    "code": "16:198:500",
+    "title": "Proseminar in Computer Science",
+    "credits": 1,
+    "credits_min": 1,
+    "credits_max": 1,
+    "academic_level": "graduate",
+    "course_type": "proseminar",
+    "description": "Required for all new full-time students in Ph.D program. Several sections are offered each term, introducing students to research activities inside the department. Full-time students in the Ph.D. program are required to register for one credit of 16:198:500 during each of their first four semesters.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-500-proseminar-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:501",
+    "title": "Mathematical Foundations of Data Science",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Focus on the use of linear algebra and statistical conceptual tools in machine learning and data mining practice. Topics include Matrix Factorizations, Bayesian approaches to Hypothesis testing - Parameter Estimation, Kernels, Density Estimation, Gradient Descent, and Neural Networks.",
+    "prerequisites": "198:205 (Discrete Math), 640:152 (Calculus II), 960:580 (Basic Probability) or equivalents",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-501-mathematical-foundations-of-data-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:503",
+    "title": "Computational Thinking",
+    "credits": null,
+    "credits_min": null,
+    "credits_max": null,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Interdisciplinary programming and computational reasoning. Archived catalogs disagree on credits (3 versus 4); current details must be verified.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": false,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-503-computational-thinking",
+    "source_checked": "2026-09-20",
+    "verification_status": "incomplete_listing",
+    "historical_source_url": "https://catalogs.rutgers.edu/generated/nb-grad_1416/pg245.html"
+  },
+  {
+    "code": "16:198:504",
+    "title": "Computational Modeling",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Note: This course may not be taken for credit toward the MS and Ph.D. degrees in computer science. It is primarily intended for cognitive science students who do not have undergraduate degrees in computer science. This course offers a hands-on introduction to computational modeling as a methodology for explaining the behavior of complex and intelligent systems. The course aims for a broad audience of graduate students who need to master computational ideas and tools for their research practice.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": false,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-504-computational-modeling",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:505",
+    "title": "Computer Structures",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Hardware organization, memory, arithmetic, I/O, control, and parallel processors.",
+    "prerequisites": "Current prerequisites require verification.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-505-computer-structures",
+    "source_checked": "2026-09-20",
+    "verification_status": "historical_2014_2016",
+    "historical_source_url": "https://catalogs.rutgers.edu/generated/nb-grad_1416/pg245.html"
+  },
+  {
+    "code": "16:198:507",
+    "title": "Advanced Computer Architecture",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Advanced Topics in computer architecture, including advancedprocessor design, models and workload charachteristics for multiprocessor systems, memory and cache coherence and consistency, multiprocessor architecture, and I/O.",
+    "prerequisites": "16:198:505",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-507-advanced-computer-architecture",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing",
+    "prerequisite_rule": {
+      "and": [
+        "16:198:505"
+      ],
+      "or_groups": []
+    }
+  },
+  {
+    "code": "16:198:508",
+    "title": "Formal Language and Automata",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "To provide a rigorous mathematical framework for two general areas: that of language description and that of computation; to examine the relation between the two and to consider practical applications from Computer Science and Linguistics. Computability theory and complexity theory are also introduced This course counts as category A for M.Sc. degree requirement. This course does NOT count as category A for Ph.D. students",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-508-formal-language-and-automata",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:509",
+    "title": "Foundations of Computer Science",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Introduction to first-order logic, emphasizing methods used in computer science. Introduction to mathematical models of computation, especially deterministic and non-deterministic Turing machines, computability theory, and space ant time complexity theory.P and NP",
+    "prerequisites": "Admission Requirements",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-509-foundations-of-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:510",
+    "title": "Numerical Analysis",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Numerical equation solving, function approximation, integration, differential equations, matrices, and least squares.",
+    "prerequisites": "Current prerequisites require verification.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-510-numerical-analysis",
+    "source_checked": "2026-09-20",
+    "verification_status": "historical_2014_2016",
+    "historical_source_url": "https://catalogs.rutgers.edu/generated/nb-grad_1416/pg245.html"
+  },
+  {
+    "code": "16:198:512",
+    "title": "Introduction to Data Structures and Algorithms",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This course is required for all students joining the Computer Science M.Sc. program. Students from other departments can request special permission numbers provided they meet the prerequisites as stated below. The course studies a variety of useful algorithms and analyze their complexity; students will gain insight into principles and data-structures useful in algorithm design. This course counts as category A for the M.Sc. degree requirement. This course does NOT count as category A for Ph.D. students. Ph.D. students should take 16:198:513 instead.",
+    "prerequisites": "Calculus and Discrete Math, Ch 0 of the Textbook and Chapters 1, 2, 3 of the reference below.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-512-introduction-to-data-structures-and-algorithms",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:513",
+    "title": "Design and Analysis of Data Structures and Algorithms",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Core material for Computer Science degree candidates. Discussion of representative algorithms and data structures encountered in applications.",
+    "prerequisites": "Familiarity with Prim and Kruskal minimum spanning tree algorithms and Dijkstra shortest path algorithm.\nFor MS students 16:198:512 is a pre-requisite.\nPh.D. students can directly register for 513.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-513-design-and-analysis-of-data-structures-and-algorithms",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing",
+    "prerequisite_rule": {
+      "and": [
+        "16:198:512"
+      ],
+      "or_groups": [],
+      "applies_to_program": "masters"
+    }
+  },
+  {
+    "code": "16:198:514",
+    "title": "Design And Analysis Of Data Structures And Algorithms II",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This course goes beyond 16:198:513 in introducing the student to new concepts and techniques used in the study of algorithms. It is intended to serve students specializing in a number of different areas within computer science.",
+    "prerequisites": "16:198:513",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-514-design-and-analysis-of-data-structures-and-algorithms-ii",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing",
+    "prerequisite_rule": {
+      "and": [
+        "16:198:513"
+      ],
+      "or_groups": []
+    }
+  },
+  {
+    "code": "16:198:515",
+    "title": "Programming Languages And Compilers I",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This course covers concepts and techniques used in the description and definition of programming languages, and in the construction of their translators.",
+    "prerequisites": "An undergraduate data structures and algorithms course, and an undergraduate compiler course (or permission of instructor)",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-515-programming-languages-and-compilers-i",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:516",
+    "title": "Programming Languages And Compilers II",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This course covers advanced aspects of compilation of modern programming languages and architectures, especially global optimization transformations and compile-time analyses.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-516-programming-languages-and-compilers-ii",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:518",
+    "title": "Operating Systems Design",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "To convey a thorough understanding of the basics of an operating system by studying techniques and algorithms for providing services in a computer system, and to understand implementation aspects of popular systems by means of case studies. This course counts as category B for M.Sc. degree requirement. This course does NOT count as category B for Ph.D. students",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-518-operating-systems-design",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:519",
+    "title": "Operating System Theory",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This course constitutes the second level in the operating systems course sequence 01:198:416 -- 01:198:519 . While 01:198:416 takes a descriptive approach to convey a thorough understanding of the various operating system tasks and their interactions, this course stresses advanced concepts in operating system design including interactions with networking, and evaluation of design options for the implementation of those concepts. Its principal purpose is to present the concepts and the algorithms for providing distributed services in a computer system. Thus, the course is intended for computer science students.",
+    "prerequisites": "Must have completed undergraduate classes equivalent to 01:198:416 and 01:198:211.  Graduate students without the 01:198:416 background should take 16:198:518 .",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-519-operating-system-theory",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:520",
+    "title": "Introduction To Artificial Intelligence",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Overview of artificial intelligence. Basic problems and methods; deductive inference, declarative programming, heuristic search; reasoning and representation in perception, planning, and learning. This course is a pre-requisite for several machine learning and AI courses. Credits for this course can not be combined with 440. Students cannot get credit for both courses counting towards their MS/Ph.D. degrees.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-520-introduction-to-artificial-intelligence",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:521",
+    "title": "Linear Programming",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Linear optimization, duality, simplex methods, sensitivity analysis, and polynomial-time algorithms.",
+    "prerequisites": "Current prerequisites require verification.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-521-linear-programming",
+    "source_checked": "2026-09-20",
+    "verification_status": "historical_2014_2016",
+    "historical_source_url": "https://catalogs.rutgers.edu/generated/nb-grad_1416/pg245.html"
+  },
+  {
+    "code": "16:198:522",
+    "title": "Network and Combinatorial Optimization Algorithms",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This semester, 522 will examine new topics and will be taught in a graduate seminar-like format. A natural question that comes up is: How to design heuristics with provable approximation guarantees (error bounds) for specific NP-hard combinatorial optimization problems one often encounters in practice? To this end, following a review of fundamental results, the course will briefly review fast approximation schemes for large structured packing and covering LPs, and then proceed through the list of specific topics (see 2015 Class URL), starting from the simpler paradigms of greedy, local search, dynamic programming, along with appropriate rounding procedures, to the more elaborate LP-based strategies, semidefinite programming, primal-dual methods, followed by deterministic or randomized rounding schemes. The insight one gains by studying these topics often points ways to design high quality algorithms for new problems and applications. The course is intended for students in computer science and in other disciplines such as mathematics, statistics, operations research, engineering, and bioinformatics.",
+    "prerequisites": "Familiarity with discrete structures, probability theory and design and analysis of algorithms, e.g., as in 01:198:205, 01:198:206, 01:198:344 or 16:198:512 or 16:198:513; or an equivalent background, in which case, contact the Instructor for Special Permission to register. (Those with < B in 513: first obtain an SP number). Knowledge of LP duality is useful but not a prerequisite.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-522-network-and-combinatorial-optimization-algorithms",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:523",
+    "title": "Computer Graphics",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Geometric modeling, animation, rendering, lighting, shading, and ray tracing.",
+    "prerequisites": "Current prerequisites require verification.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-523-computer-graphics",
+    "source_checked": "2026-09-20",
+    "verification_status": "historical_2014_2016",
+    "historical_source_url": "https://catalogs.rutgers.edu/generated/nb-grad_1416/pg245.html"
+  },
+  {
+    "code": "16:198:525",
+    "title": "Brain-Inspired Computing",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "The course explores how computation in the human brain can be effectively modeled across the main levels of abstraction (from a single neuron to biological neural networks and system; introduces a time-sensitive computational formalization of brain function based on the model of neuron as a Spike Processing Machine – Spike Neural Networks (SNNs); and employs neuro-mimetic or neuro-inspired SNNs to tackle a problem in a term-wide project. The aim of this course is to provide the student with a solid foundation in the field.",
+    "prerequisites": "01:198:205 or 01:198:440",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-525-brain-inspired-computing",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:526",
+    "title": "Data Interaction and Visual Analytics",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This class is a foundational class for Data Science within the Computer Science Department. To become proficient in the current major techniques and systems for algorithmic data analysis, exploration, visual interaction, and summarization. Students will complete a competitive group project that will incorporate all the facets of software product development, namely Conceptualization, Data collection, Algorithm identification and Implementation, User Interface, and Evaluation.",
+    "prerequisites": "* Topics:\nModule Number  | Module Name\n0  | Introduction to Data Interaction & Visual Analytics\n1  | Visual analytics Introduction, Plotly, Tree Maps, Barycentric Representations & Sample Project Presentations\n2  | Backend to Frontend Design & Tools, Libraries, Plots, and Interactions, Linear Regression\n3  | Introduction to Massive Computing and MapReduce\n3  | Hadoop Distributed File System (HDFS) and Sample Project Presentation\n4  | Streaming Data and Introduction to Apache Spark and CAP Theorem\n4.5  | Decision Trees and MapReduce\n5  | External Memory Algorithms, I/O Model​,\n5  | Graph Visualization\n   | Stage 1 Project Presentations\n5  | Force Directed Layout Algorithms\n6  | Graph Visualization Literature Review\nGraph Cities: Giga Graph Visualization\nGiga Graph Visualization (supplement)\n   | Spring Break\n7  | Data Analytics (Part I: Data Reduction and Dictionaries)\nJaccard Similarity, Conditional Probability\nData Analytics (Part II: Scalable Algorithms and Associative Statistics)\nPearson Coefficients, Estimators, Histograms\n   | Stage 2 Project Presentations\n7  | ANOVA Supplement\nNull Hypothesis, Sum of Squares, F Statistic, P Value, Two Sample t-test, Bonferroni Correction\n7  | Data Analytics (Part III: Multi-variate Regression)\nLinear Regression (Mean Square Error, Gradient Descent)\nLogistic Regression (Module Formulation, Update Rule, Newton-Rapson Algorithm, Generalized least squares estimator)\n8  | Data Management & Data Mining\n9  | Time and Space & Infrastructure\n10  | Perception and Cognitive aspects, Evaluation & Recommendations\nReview  | Final Review\n   | Final Project Presentations and Best Class Project Announcements",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-526-data-interaction-and-visual-analytics",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:527",
+    "title": "Database Systems for Data Science",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Much of the world's data resides in databases. The purpose of this course is to introduce relational and NoSQL database concepts with emphasis on both theoretical and practical learning. This course helps students learn and apply knowledge of the SQL language and implementing components of relational and NoSQL database systems (DBMS). Students will create database instances in the cloud for both relational and NoSQL database systems such as MySQL, SQL Server, Amazon Redshift, Google BigQuery and MongoDB. Through a couple of hands-on projects students will practice building and running advanced SQL scripts and Python/Java codes.",
+    "prerequisites": "This course is suitable for first year M.Sc. Students.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-527-database-systems-for-data-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:529",
+    "title": "Computational Geometry",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This course covers fundamental algorithmic problems associated with geometric computations, including convex hulls, polygons, Voronoi diagrams, triangulation, intersection, range queries, visibility, arrangements, and motion planning for robotics. It also covers algorithmic methods used in geometric computation such as plane sweep, incremental insertion, randomization, divide-and-conquer, etc. Students are expected to have undergraduate level of data structures and algorithms.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-529-computational-geometry",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:530",
+    "title": "Principles of Artificial Intelligence",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "To provide a comprehensive introduction to current research methods in artificial intelligence. The course is appropriate both for nonspecialists who wish to acquire a strong grounding in the engineering aspects of computing with real-world data, and as a prerequisite to more advanced courses in artificial intelligence.",
+    "prerequisites": "An undergraduate course in artificial intelligence.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-530-principles-of-artificial-intelligence",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:532",
+    "title": "Foundations Of Knowledge Representation",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Logical knowledge representation, modal logic, nonmonotonic reasoning, and tractable inference.",
+    "prerequisites": "Current prerequisites require verification.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-532-foundations-of-knowledge-representation",
+    "source_checked": "2026-09-20",
+    "verification_status": "historical_2014_2016",
+    "historical_source_url": "https://catalogs.rutgers.edu/generated/nb-grad_1416/pg245.html"
+  },
+  {
+    "code": "16:198:533",
+    "title": "Natural Language Processing",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "An in-depth study of the ideas and techniques underlying the development of a computational theory of human language use, which is necessary both for practical interactive dialogue applications, as well as for the scientific study of human communication. The course is intended for computer science graduate students, as well as students in allied areas (information science, linguistics, philosophy, psychology, computer engineering) who have interests in artificial intelligence and computational linguistics.",
+    "prerequisites": "Either 198:530 or permission of the instructor.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-533-natural-language-processing",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing",
+    "prerequisite_rule": {
+      "and": [
+        "16:198:530"
+      ],
+      "or_groups": []
+    }
+  },
+  {
+    "code": "16:198:534",
+    "title": "Computer Vision",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Image formation, transformation, estimation, recognition, and implementation of vision algorithms.",
+    "prerequisites": "Current prerequisites require verification.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-534-computer-vision",
+    "source_checked": "2026-09-20",
+    "verification_status": "historical_2014_2016",
+    "historical_source_url": "https://catalogs.rutgers.edu/generated/nb-grad_1416/pg245.html"
+  },
+  {
+    "code": "16:198:535",
+    "title": "Pattern Recognition: Theory and Applications",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "The principal purpose of this course is to introduce the student to the problems of pattern recognition through a comparative presentation of methodology and practical examples. The course is intended for computer science students with an applied mathematics orientation, and also for students in other programs (computer and electrical engineering, statistics, mathematics, psychology) who are interested in this area of research. It is also recommended for students who plan to work in the area of biomedical applications of computers.",
+    "prerequisites": "16:198:530 OR 16:198:520",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-535-pattern-recognition-theory-and-applications",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing",
+    "prerequisite_rule": {
+      "and": [],
+      "or_groups": [
+        [
+          "16:198:520",
+          "16:198:530"
+        ]
+      ]
+    }
+  },
+  {
+    "code": "16:198:536",
+    "title": "Machine Learning",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "An in-depth study of machine learning, to impart an understanding of the major topics in this area, the capabilities and limitations of existing methods, and research topics in this field.",
+    "prerequisites": "16:198:530 or 16:198:520",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-536-machine-learning",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing",
+    "prerequisite_rule": {
+      "and": [],
+      "or_groups": [
+        [
+          "16:198:520",
+          "16:198:530"
+        ]
+      ]
+    }
+  },
+  {
+    "code": "16:198:538",
+    "title": "Complexity Of Computation",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "The course presents the main results of computational complexity theory, including complexity classes, reducibilities, and complete sets. Relationships between time and space complexity, between serial and parallel computation, and among deterministic, probabilistic, and nondeterministic computation. Complexity theoretic notions of randomness.",
+    "prerequisites": "16:198:513 and 16:198:509 (or equivalent) are useful.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-538-complexity-of-computation",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:539",
+    "title": "Database Management Systems",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Implementing components of relational database systems (DBMS): record storage, indexing structures, query evaluation, joins algorithms, query optimization. Understanding and administering a DBMS: security, concurrency control and crash recovery. Tuning DBMS for performance. Recent advances in data management : text-based information retrieval, web search, cloud computing, column store systems. This class focuses on data management from a database administrator's, or implementer's, perspective. This course is suitable for entry level M.Sc. Students who has not taken a solid undergraduate database courses. This course counts as category B for M.Sc. degree requirement. This course does NOT count as category B for Ph.D. students",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-539-database-systems-implementation",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:540",
+    "title": "Combinatorial Methods In Complexity Theory",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Circuit, communication, and proof complexity, lower bounds, and interactive proofs.",
+    "prerequisites": "Current prerequisites require verification.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-540-combinatorial-methods-in-complexity-theory",
+    "source_checked": "2026-09-20",
+    "verification_status": "historical_2014_2016",
+    "historical_source_url": "https://catalogs.rutgers.edu/generated/nb-grad_1416/pg245.html"
+  },
+  {
+    "code": "16:198:541",
+    "title": "Advanced Data Management",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This course focuses on advanced topics in Database Management Systems and Web Data.",
+    "prerequisites": "16:198:513 or 16:198:512;\nknowledge of logic (as can be gained in 16:198:509 );\nan undergraduate-level database course.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-541-database-systems",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:543",
+    "title": "Massive Data Storage, Retrieval and Deep Learning",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "In today's world of massive amounts of data, new methods and techniques are needed to dive deeper into such data including hands-on practical work on real data sets. This course covers the major existing algorithmic primitives necessary for the processing of \"massive\" data sets in external memory and data streaming settings. It also introduces various deep learning frameworks and corresponding neural methods in a variety of application areas. Students have the opportunity to gain experience with major platforms for storage and retrieval, including Hadoop Distributed File Systems and Data Streaming with Apache Spark. The focus of one \"large data\" project is on techniques for information retrieval, natural language processing, and the necessary indexing methods for the retrieval of semantically relevant information. A second \"large data\" project focuses on the application of a deep learning framework to an application area of each student's choice. This class is related to CS541 (graduate databases) and to CS539 (physical databases) – but it is",
+    "prerequisites": "Basic familiarity with data structures and algorithms (like the one provided in CS512), mathematical foundations and probability theory (CS501), and data base foundations (like CS527 and/or CS539). Some of the tools to be used require knowledge of Python, C++, Java, or Scala. Other examples will be based on Apache Spark. However, prior knowledge of Spark (using Scala) is not required but certainly it will not be harmful.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-543-massive-data-storage-retrieval-and-deep-learning",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:544",
+    "title": "Computer Security",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This is an entry level course for M.Sc. Students. This course counts as category B for M.Sc. degree requirement. This course does NOT count as category B for Ph.D. students.",
+    "prerequisites": "16:198:518",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-544-computer-security",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing",
+    "prerequisite_rule": {
+      "and": [
+        "16:198:518"
+      ],
+      "or_groups": []
+    }
+  },
+  {
+    "code": "16:198:545",
+    "title": "Distributed Systems",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This course will cover the basic mechanisms for building distributed systems (e.g., RPC, synchronization, transactions, etc.), a number of relevant subsystems of distributed operating systems (e.g., distributed file systems, distributed shared-memory systems, etc.), and issues in wide-area distributed systems (e.g., security, wide-area clustering, etc.).",
+    "prerequisites": "16:198:519",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-545-distributed-systems",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing",
+    "prerequisite_rule": {
+      "and": [
+        "16:198:519"
+      ],
+      "or_groups": []
+    }
+  },
+  {
+    "code": "16:198:546",
+    "title": "Computer System Security",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This course will cover both classic, foundational topics in computer security as well as recent developments. A key goal of the course will be to educate students to think both as an attacker and as a defender. The focus of the course will be security of computer systems, and will complement CS537, which focuses on distributed systems security.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-546-computer-system-security",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:547",
+    "title": "The Security and Dependability of Distributed Systems",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This course will cover the twin issues of security and dependability of distributed systems. Here are some of the questions we will explore: (1) How can the actors of a multi-agent system collaborate effectively, without having any trust in each other? (2) How can one create an effective social network without a Facebook like central mediator? (3) Can one protect large organization (like Rutgers, or like a defense establishment) from DDoS attacks?",
+    "prerequisites": "No specific courses are required. But undergraduate level exposure to distributed computing, discrete mathematics and theory of algorithms is expected.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-547-the-security-and-dependability-of-distributed-systems",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:549",
+    "title": "Artificial Intelligence for Visual Computing",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This course will introduce students to recent trends in Artificial Intelligence for applications to visual computing. Visual computing is a sub-field of Computer Science which broadly encompasses areas including but not limited to: Computer Graphics, Computer Vision, Virtual and Augmented Reality, and Interactive Techniques. As part of this course, students will therefore be exposed to concepts in Artificial Intelligence which directly apply to one or more of these topic areas.",
+    "prerequisites": "Proficiency in one or more of the following areas:\n\n    * Artificial Intelligence\n    * Computer Graphics\n    * Computer Vision\n    * Machine Learning\n    * Robotics",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-549-artificial-intelligence-for-visual-computing",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:550",
+    "title": "Massive Data Mining",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This class is recommended for students interested in pursuing a concentration in Massive Data Analytics or Machine Learning. Students will learn algorithms to store, process, mine, analyze, and synthesize streaming data, or data at rest that does not fit in Random Access Memory. The material covered here equips students with the main backend algorithms and infrastructure necessary for the completion of the required Capstone Project for MS graduation with a Massive Data Analytics concentration.",
+    "prerequisites": "CS 512 or CS 513 (Fundamental Algorithms)\n    * Linear Algebra, Basic Probability (Moments, Typical Distributions, MLE)",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-550-massive-data-mining",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:551",
+    "title": "Ubiquitous Computing",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "The course includes discussion of contributions of various fields to ubiquitous computing, including Internet-of-Things, Data Science, AI, Human-Computer Interaction, Embedded Computing, Real-time Systems, Machine Learning, Privacy, and Security. Students will gain practical experience in developing sensing, learning, and decision-making systems in different application domains such as Smart Cities, Smart Home, Autonomous Driving, and Gig Economy.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/ubiquitous-computing",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:552",
+    "title": "Computer Networks",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This course provides students with a thorough understanding of the basic principles of computer networks, the design philosophy of scalable internetworks, and the details of computer network protocols. Students who complete this course will learn not only how network protocols work but why they are designed the way they are. They will also learn how to implement an event-driven computer network simulator and use it as a tool to study the behavior and performance of network protocols.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-552-computer-networks",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:553",
+    "title": "Design of Internet Services",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "The course introduces students to advanced topics in Internet services , especially those that relate to application layer services and infrastructure services. The course will enable students to understand tools required to deploy Internet scale services, in terms of their operations and management requirements. It will also enable them to design new Internet services in a manner that is scalable, available and efficient. Topics to be covered include: Serverless architectures, Scaling and Elasticity, Storage services, KEY Value stores, Virtualization services and containers, Cluster management and Coordination services , monitoring and analytics services.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-553-design-of-internet-services",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:554",
+    "title": "Capstone Project I",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "capstone",
+    "description": "This class is the first in a hands on approach sequence focused on building systems that process data at scale. First priority is given to students in the MSDS professional program. The systems built will be evaluated based on three criteria: Feasibility, Usefulness and Novelty. A panel formed by industry professionals and faculty, will judge the completed projects. Best project awards will be given and their creators will be invited to present them in an annual Industry-Faculty gala ceremony. Emphasis will be on Interface development, large scale analysis and sense making. Course Material: VisMaster-book The electronic version of this book is available from the Eurographics Digital Library at http://diglib.eg.org†diglib.eg.org * Sample Project Categories (A Non Exhaustive Guide) 1. Similarity Search, Recommender Systems and Collaborative Filtering 2. Data Retrieval and Topic Waves 3. Prediction and Verification 4. Transaction Driven Data 5. Medical Imaging 6. Computer Aided Manufacturing 7. Apps for: Data Erasure, Nameless File Systems, Password Boxes, Phonetic Lyrics Search 8.",
+    "prerequisites": "Languages:  C/C++, Java, JavaScript, Python\n\nCS554-Capstone I (Interface Concentration): 16:198:512 or 16:198:513 (Algorithms), 16:198:526 (DIVA), 16:198:527 or 16:198:539 (Data Bases or equivalent).  A class on Computer Graphics and Vision (01:198:428 or equivalent) may be useful but it is not required.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "msds"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-554-capstone-project-i",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:555",
+    "title": "Capstone Project II",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "capstone",
+    "description": "This is the ssecond class in a sequence. It is a hands on approach, for students in the MSDS professional program, to build working systems that process data at scale. The systems built will be evaluated based on three criteria: Feasibility, Usefulness and Novelty. A panel formed by industry professionals and faculty, will judge the completed projects. Best project awards will be given and their creators will be invited to present them in an annual Industry-Faculty gala ceremony. The first capstone class focus on Interface development and the second concentrates on large scale analysis and sense making. Course Material: VisMaster-book The electronic version of this book is available from the Eurographics Digital Library at http://diglib.eg.org†diglib.eg.org Sample Project Categories (A Non Exhaustive Guide) 1. 1. Similarity Search, Recommender Systems and Collaborative Filtering 2. Data Retrieval and Topic Waves 3. Prediction and Verification 4. Transaction Driven Data 5. Medical Imaging 6. Computer Aided Manufacturing 7. Apps for: Data Erasure, Nameless File Systems,",
+    "prerequisites": "Languages:  C/C++, Java, JavaScript, Python\n16:198:554 , 16:198:543  (Massive Data Storage and Retrieval), 16:198: 550 (Massive Data Mining)/16:198: 535 (Pattern Recognition) or 16:198: 550 (Massive Data Mining)/16:198:536 (Machine Learning) , or 16:198:535 /16:198:536 (Pattern Recognition-Machine Learning)",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "msds"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-555-capstone-project-ii",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:558",
+    "title": "Quantum Computing: Programs and Systems",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Study foundational research on realizing quantum computers and implement algorithms using open-source quantum frameworks.",
+    "prerequisites": "Background in Python, computer architecture, algorithms, linear algebra, and probability; verify with instructor.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-558-quantum-computing-programs-and-systems",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:560",
+    "title": "Introduction to Computational Robotics",
+    "credits": 4,
+    "credits_min": 4,
+    "credits_max": 4,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "This course provides a general introduction to robotics from a computational perspective with a focus on mobile robots. This includes the use of popular software for interacting with and simulating robots, such as the Robot Operation System (ROS). It will provide a view of robots as autonomous agents with a mechanical embodiment, which must observe and act upon their surroundings through the iterative execution of a sensing-planning- actuation loop. On the sensing and perception side, the course will cover state estimation challenges, such as robot localization, simultaneous localization and mapping (SLAM), as well as Bayesian solutions to these problems, such as Kalman and particle filters. For planning and decision making purposes, the course will introduce basic planning and replanning methods, such as A* and D*-like algorithms, the configuration space abstraction, sampling-based planners, and a toolbox of algorithms that solve problems by utilizing these principles. Extensions to multi-robot systems, online planning and handling uncertainty will be touched upon as well. On",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-560-introduction-to-computational-robotics",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:562",
+    "title": "Advanced Robotics",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "198:562 provides comprehensive coverage of mathematical and algorithmic foundations of robotics, particularly motion planning, grasping and manipulation with an emphasis on data-driven and machine learning tools used in modern robotics. The focus will be on how robots can acquire new behaviors and adapt to their environment through learning.",
+    "prerequisites": "16:198:520/536, 16:198:560",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-562-advanced-robotics",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing",
+    "prerequisite_rule": {
+      "and": [
+        "16:198:560"
+      ],
+      "or_groups": [
+        [
+          "16:198:520",
+          "16:198:536"
+        ]
+      ]
+    }
+  },
+  {
+    "code": "16:198:580",
+    "title": "Topics In Computers In Biomedicine",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "special_topics",
+    "description": "This course surveys computational methods in biology or medicine: topics vary from instructor to instructor and may include computational molecular biology, medical reasoning, and imaging. See semester-specific web pages for details.",
+    "prerequisites": "16:198:520 or 16:198:513, depending on the semester, or permission of the instructor.",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-580-topics-in-computers-in-biomedicine",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:583",
+    "title": "Topics In Software Design",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "special_topics",
+    "description": "This course is intended to lead into research in the areas of distributed systems and software engineering. The seminar deals with various issues concerning the design, construction and evolution of large scale software systems, covering both sequential as well as distributed and parallel systems. Among the issues to be discussed are: * Modern programming paradigms, especially Object-Oriented Programming. * Programming Environments. * The (locally developed) concept of Law-Governed architectures. * Open distributed systems. * Various topics in operating systems. Other topics may be included, depending on the interest of the participants. The seminar will include talks by the instructor, by several guests and by the students.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-583-topics-in-software-design",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:590",
+    "title": "Socially Cognizant Robotics",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "elective",
+    "description": "Students of the “Socially Cognizant Robotics” course will learn basic principles and state-of-the-art developments of robotics so as to learn the expected trajectory of this technology and its impact on individuals and society. The course is designed for both STEM students as well as computationally-oriented cognitive and social science students. The interdisciplinary curriculum has seven underlying disciplines spanning STEM fields to social and behavioral sciences. It includes traditionally technical disciplines, such as robot embodiment and control, and extends to areas which support human interaction, such as visual learning and language processing, to cognitive modeling, which enables more high level human-robot cooperation, and finally to areas such as behavioral research and public policy. The course will utilize open-source software libraries in robotics, computer vision, and deep learning. Recent innovations at the intersection of deep reinforcement learning and human behavior modeling will be explored in the context of optimizing collaborative robot action.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/socially-cognizant-robotics",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:596",
+    "title": "Topics In The Foundations Of Computer Science",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "special_topics",
+    "description": "Careful study of papers on the topic selected for the given semester. The topic will be announced at the time of registration. An example of a recent topic: quantum computation.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-596-topics-in-the-foundations-of-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:598",
+    "title": "Topics In Artificial Intelligence",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "special_topics",
+    "description": "A special topics course covering particular areas of research in Artificial Intelligence.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-598-topics-in-artificial-intelligence",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:601",
+    "title": "Selected Problems In Computer Science",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "independent_study",
+    "description": "This course is to be used as a means for an individual student, or a small number of students, to work with a professor on a topic of their choosing. It can also be used for non-thesis research, or proto-research that may help students in selecting Ph.D. advisors. All full-time Ph.D. students are required to register for an independent study course by at least their third semester of study. When registering for independent study as a PhD student use 16:198:601, 602, or 603 depending on semester offered. Select the unique section for the professor within that course. (This is done alphabetically by first initial of last name) Also, it is necessary to fill out a form, so that the department can keep track of which student is doing an independent study with which professor. This form will be sent to you electronically once you are registered. It will be sent via Docusign. Note that the department does not impose any",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-601-selected-problems-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:602",
+    "title": "Selected Problems In Computer Science",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "independent_study",
+    "description": "This course is to be used as a means for an individual student, or a small number of students, to work with a professor on a topic of their choosing. It can also be used for non-thesis research, or proto-research that may help students in selecting Ph.D. advisors. All full-time Ph.D. students are required to register for an independent study course by at least their third semester of study. When registering for independent study as a PhD student use 16:198:601, 602, or 603 depending on semester offered. Select the unique section for the professor within that course. (This is done alphabetically by first initial of last name) Also, it is necessary to fill out a form, so that the department can keep track of which student is doing an independent study with which professor. This form will be sent to you electronically once you are registered. It will be sent via Docusign. Note that the department does not impose any",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-602-selected-problems-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:603",
+    "title": "Selected Problems In Computer Science",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "independent_study",
+    "description": "This course is to be used as a means for an individual student, or a small number of students, to work with a professor on a topic of their choosing. It can also be used for non-thesis research, or proto-research that may help students in selecting Ph.D. advisors. All full-time Ph.D. students are required to register for an independent study course by at least their third semester of study. When registering for independent study as a PhD student use 16:198:601, 602, or 603 depending on semester offered. Select the unique section for the professor within that course. (This is done alphabetically by first initial of last name) Also, it is necessary to fill out a form, so that the department can keep track of which student is doing an independent study with which professor. This form will be sent to you electronically once you are registered. It will be sent via Docusign. Note that the department does not impose any",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-603-selected-problems-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:604",
+    "title": "Selected Problems In Computer Science",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "independent_study",
+    "description": "This course is to be used as a means for an individual student, or a small number of students, to work with a professor on a topic of their choosing. It can also be used for non-thesis research, or proto-research that may help students in selecting MS. advisors. All full-time MS students are required to register for an independent study course by at least their third semester of study. When registering for independent study as a MS student use 16:198:604, 605, or 606 depending on semester offered. Select the unique section for the professor within that course. (This is done alphabetically by first initial of last name) Also, it is necessary to fill out a form, so that the department can keep track of which student is doing an independent study with which professor. This form will be sent to you electronically once you are registered. It will be sent via Docusign. Note that the department does not impose any",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-604-selected-problems-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:605",
+    "title": "Selected Problems In Computer Science",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "independent_study",
+    "description": "This course is to be used as a means for an individual student, or a small number of students, to work with a professor on a topic of their choosing. It can also be used for non-thesis research, or proto-research that may help students in selecting MS. advisors. All full-time MS students are required to register for an independent study course by at least their third semester of study. When registering for independent study as a MS student use 16:198:604, 605, or 606 depending on semester offered. Select the unique section for the professor within that course. (This is done alphabetically by first initial of last name) Also, it is necessary to fill out a form, so that the department can keep track of which student is doing an independent study with which professor. This form will be sent to you electronically once you are registered. It will be sent via Docusign. Note that the department does not impose any",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-605-selected-problems-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:606",
+    "title": "Selected Problems In Computer Science",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "independent_study",
+    "description": "This course is to be used as a means for an individual student, or a small number of students, to work with a professor on a topic of their choosing. It can also be used for non-thesis research, or proto-research that may help students in selecting MS. advisors. All full-time MS students are required to register for an independent study course by at least their third semester of study. When registering for independent study as a MS student use 16:198:604, 605, or 606 depending on semester offered. Select the unique section for the professor within that course. (This is done alphabetically by first initial of last name) Also, it is necessary to fill out a form, so that the department can keep track of which student is doing an independent study with which professor. This form will be sent to you electronically once you are registered. It will be sent via Docusign. Note that the department does not impose any",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-606-selected-problems-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:607",
+    "title": "Problems In Numerical Methods",
+    "credits": null,
+    "credits_min": 1,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "independent_study",
+    "description": "(Note: This course has not been offered for several years.) This course is intended for advanced graduate students (Computer Science majors as well as students from other disciplines) who wish to advance their knowledge in specific areas of the application of numerical methods. This may be taken by interested students in conjunction with 198:527 (Computer Methods for Partial Differential Equations).",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-607-problems-in-numerical-methods",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:608",
+    "title": "Problems In Numerical Methods",
+    "credits": null,
+    "credits_min": 1,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "independent_study",
+    "description": "This course is intended for advanced graduate students (Computer Science majors as well as students from other disciplines) who wish to advance their knowledge in specific areas of the application of numerical methods. This may be taken by interested students in conjunction with 198:527 (Computer Methods for Partial Differential Equations).",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-608-problems-in-numerical-methods",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:671",
+    "title": "Seminar in Computer Science",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "seminar",
+    "description": "Special topics in computer science.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-671-seminar-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:672",
+    "title": "Seminar in Computer Science",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "seminar",
+    "description": "Special topics in computer science.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-672-seminar-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:673",
+    "title": "Seminar in Computer Science",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "seminar",
+    "description": "Special topics in computer science.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-673-seminar-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:674",
+    "title": "Seminar in Computer Science",
+    "credits": 3,
+    "credits_min": 3,
+    "credits_max": 3,
+    "academic_level": "graduate",
+    "course_type": "seminar",
+    "description": "Special topics in computer science.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": true,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-674-seminar-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:701",
+    "title": "Research In Computer Science",
+    "credits": null,
+    "credits_min": 1,
+    "credits_max": 12,
+    "academic_level": "graduate",
+    "course_type": "research",
+    "description": "The course numbers 701, 702 and 703 are used by graduate students for their Ph.D. thesis research work. There is one section of 701/702/703 for each member of the graduate faculty. A Ph.D. student must have a least 24 credits of 701-2-3 taken toward writing a Ph.D. thesis. Ph.D. students should not register for 701-2-3 until they have passed their qualifying exams. Students receive a \"grade\" of S or U for their research credits.\\ Open only to PhD Students",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-701-research-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:702",
+    "title": "Research In Computer Science",
+    "credits": null,
+    "credits_min": 1,
+    "credits_max": 12,
+    "academic_level": "graduate",
+    "course_type": "research",
+    "description": "The course numbers 701, 702 and 703 are used by graduate students for their Ph.D. thesis research work. There is one section of 701/702/703 for each member of the graduate faculty. A Ph.D. student must have a least 24 credits of 701-2-3 taken toward writing a Ph.D. thesis. Ph.D. students should not register for 701-2-3 until they have passed their qualifying exams. Students receive a \"grade\" of S or U for their research credits. ᵅ Open Only to PhD Students",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-702-research-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:703",
+    "title": "Research In Computer Science",
+    "credits": null,
+    "credits_min": 1,
+    "credits_max": 12,
+    "academic_level": "graduate",
+    "course_type": "research",
+    "description": "The course numbers 701, 702 and 703 are used by graduate students for their Ph.D. thesis research work. There is one section of 701/702/703 for each member of the graduate faculty. A Ph.D. student must have a least 24 credits of 701-2-3 taken toward writing a Ph.D. thesis. Ph.D. students should not register for 701-2-3 until they have passed their qualifying exams. Students receive a \"grade\" of S or U for their research credits. ᵅ Open Only to PhD Students",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-703-research-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:704",
+    "title": "Research In Computer Science",
+    "credits": null,
+    "credits_min": 1,
+    "credits_max": 6,
+    "academic_level": "graduate",
+    "course_type": "research",
+    "description": "The course numbers 704, 705 and 706 are used by graduate students for their MS thesis research work. There is one section of 704/705/706 for each member of the graduate faculty. A master’s student takes a total of 6 credits of 704, 705, 706 for preparing a Master’s thesis (not essay). Apart from this situation, a student cannot count any 704, 705, 706 credits towards a Master’s degree. Students receive a \"grade\" of S or U for their research credits. ᵞ Open Only to MS Thesis Students",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-704-research-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:705",
+    "title": "Research in Computer Science",
+    "credits": null,
+    "credits_min": 1,
+    "credits_max": 6,
+    "academic_level": "graduate",
+    "course_type": "research",
+    "description": "The course numbers 704, 705 and 706 are used by graduate students for their MS thesis research work. There is one section of 704/705/706 for each member of the graduate faculty. A master’s student takes a total of 6 credits of 704, 705, 706 for preparing a Master’s thesis (not essay). Apart from this situation, a student cannot count any 704, 705, 706 credits towards a Master’s degree. Students receive a \"grade\" of S or U for their research credits. ᵞ Open Only to MS Thesis Students",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-705-research-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:706",
+    "title": "Research in Computer Science",
+    "credits": null,
+    "credits_min": 1,
+    "credits_max": 6,
+    "academic_level": "graduate",
+    "course_type": "research",
+    "description": "The course numbers 704, 705 and 706 are used by graduate students for their MS thesis research work. There is one section of 704/705/706 for each member of the graduate faculty. A master’s student takes a total of 6 credits of 704, 705, 706 for preparing a Master’s thesis (not essay). Apart from this situation, a student cannot count any 704, 705, 706 credits towards a Master’s degree. Students receive a \"grade\" of S or U for their research credits. ᵞ Open Only to MS Thesis Students",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-706-research-in-computer-science",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  },
+  {
+    "code": "16:198:800",
+    "title": "Matriculation Continued",
+    "credits": 0,
+    "credits_min": 0,
+    "credits_max": 0,
+    "academic_level": "graduate",
+    "course_type": "administrative",
+    "description": "This makes it possible for a student to take a semester's leave of absence. The student must make a formal request to the Director of the Program by filling out a form. Permission will almost never be granted for more than two semesters. Once the student has obtained departmental approval, he must register for 198:800 . The Graduate School does not allow students who have passed the Ph.D. qualifying exam to take Matriculation Continued. Such students must be registered for at least 1 credit of thesis research (701-2) each semester.",
+    "prerequisites": "",
+    "prerequisite_status": "requires_verification",
+    "recommendable": false,
+    "cs_degree_credit": null,
+    "allowed_programs": [
+      "masters",
+      "phd"
+    ],
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-800-matriculation-continued",
+    "source_checked": "2026-09-20",
+    "verification_status": "department_listing"
+  }
+]

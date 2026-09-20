@@ -1,13 +1,13 @@
 {
-  "schema_version": "1.0",
-  "application_scope": "Rutgers–New Brunswick only. Course resolution uses titles/codes. Campus is not an entity, memory preference, missing field, or clarification requirement.",
+  "schema_version": "1.1",
+  "application_scope": "Rutgers–New Brunswick only. Course resolution uses titles/codes. Campus is not an entity, memory preference, missing field, or clarification requirement. Undergraduate and graduate catalogs are strictly separate. Ask for academic_level if unknown; never infer it from a requested course.",
   "optional_memory_output": {
     "clarification_action": "When pending clarification exists: resume for an answer, incomplete for an ambiguous/non-answer, new_task only for explicit cancellation or task change; otherwise null.",
     "memory_updates": "Explicit user facts only: interests/goals accept add, remove, replace lists; preferences overwrite scalar values or clear with null.",
     "course_reference": "null for new queries; otherwise source latest/recommendations/lookup_courses/pathway_targets and optional one-based indices. Null indices means the entire referenced set."
   },
   "description": "Query validation schema for course recommendation system",
-  "last_updated": "2024-01-15",
+  "last_updated": "2026-09-20",
   
   "valid_intents": [
     "course_recommendation",
@@ -32,7 +32,7 @@
         "Recommend some courses for web development"
       ],
       "required_entities": ["interests"],
-      "optional_entities": ["year", "credit_hours", "career_path", "gpa_priority", "difficulty_preference"],
+      "optional_entities": ["academic_level", "graduate_program", "year", "credit_hours", "career_path", "gpa_priority", "difficulty_preference"],
       "minimum_confidence": 0.5,
       "key_indicators": [
         "recommend",
@@ -105,7 +105,7 @@
         "My career goal is software engineering"
       ],
       "required_entities": [],
-      "optional_entities": ["year", "interests", "credit_hours", "career_path", "difficulty_preference", "gpa_priority"],
+      "optional_entities": ["academic_level", "graduate_program", "year", "interests", "credit_hours", "career_path", "difficulty_preference", "gpa_priority"],
       "minimum_confidence": 0.4,
       "notes": "Usually follows a clarification question from the system"
     },
@@ -119,7 +119,7 @@
         "How does the CS major work?"
       ],
       "required_entities": [],
-      "optional_entities": ["year"],
+      "optional_entities": ["academic_level", "graduate_program", "year"],
       "minimum_confidence": 0.6
     },
     
@@ -153,7 +153,7 @@
         "Plan my schedule for junior year"
       ],
       "required_entities": ["credit_hours"],
-      "optional_entities": ["year", "interests", "time_constraints"],
+      "optional_entities": ["academic_level", "graduate_program", "year", "interests", "time_constraints"],
       "minimum_confidence": 0.5,
       "key_indicators": [
         "plan my schedule",
@@ -172,7 +172,7 @@
         "What classes are required for CS major?"
       ],
       "required_entities": [],
-      "optional_entities": ["year"],
+      "optional_entities": ["academic_level", "graduate_program", "year"],
       "minimum_confidence": 0.6,
       "key_indicators": [
         "graduate",
@@ -200,6 +200,16 @@
   },
   
   "entity_definitions": {
+    "academic_level": {
+      "type": "string",
+      "valid_values": ["undergraduate", "graduate"],
+      "description": "Explicit current enrollment level; null if unknown. Wanting to graduate or attend grad school is not graduate enrollment."
+    },
+    "graduate_program": {
+      "type": "string",
+      "valid_values": ["masters", "phd", "msds"],
+      "description": "Explicit graduate program, otherwise null. First-year masters students are graduate, not freshman."
+    },
     "year": {
       "type": "categorical",
       "description": "Student's current academic year",
@@ -209,7 +219,7 @@
         "sophomore": ["sophomore", "2nd year", "second year", "soph", "year 2", "2nd-year"],
         "junior": ["junior", "3rd year", "third year", "year 3", "3rd-year"],
         "senior": ["senior", "4th year", "fourth year", "year 4", "4th-year"],
-        "graduate": ["graduate", "grad student", "masters", "phd", "5th year", "ms", "phd student"]
+        "graduate": ["graduate", "grad student", "masters", "phd", "ms", "phd student"]
       },
       "extraction_patterns": [
         "I'm a {year}",

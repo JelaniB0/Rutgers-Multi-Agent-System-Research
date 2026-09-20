@@ -69,6 +69,63 @@ Ask for recommendations or prerequisite information, or provide a transcript PDF
 path when prompted. Enter `quit` to exit. Relative PDF paths resolve from your
 terminal's working directory; absolute paths also work.
 
+## Undergraduate and graduate advising
+
+The advisor keeps undergraduate and graduate students in separate course pools.
+It asks for academic level when unknown and remembers the answer for the session.
+For example: "I'm a first-year CS master's student interested in machine learning"
+or "I'm an undergraduate junior interested in systems." Asking about a graduate
+course does not change an undergraduate profile. Explicit profile corrections clear
+prior course references so follow-up questions cannot reuse the other pool.
+
+`rutgers_courses.json` remains the undergraduate catalog. The separate
+`rutgers_graduate_courses.json` contains 73 graduate course/registration records
+from the [department course index](https://www.cs.rutgers.edu/academics/graduate/course-synopses),
+checked September 20, 2026. Each record has credits (including variable ranges),
+source URL, verification status, program scope, and a recommendation flag.
+There are 46 records in the ordinary graduate recommendation pool. Research,
+independent study, proseminar, administrative and MSDS capstone registrations,
+CS-degree-excluded courses, and incomplete/historical records remain available
+for same-level lookup but are excluded from ordinary recommendations. Historical
+details are explicitly labeled; CS 503's conflicting credits remain unknown.
+Special-topic titles describe a catalog course, not a verified section topic.
+
+`academic_level` is `undergraduate` or `graduate`; `graduate_program` is `masters`,
+`phd`, or `msds` when explicitly known. Graduate transcripts are not classified by
+undergraduate earned-credit thresholds. Retrieval, exact lookup, candidate reuse,
+constraints, and ranking enforce the level boundary. Live schedule requests and
+caches distinguish U/G offerings. Unavailable or empty schedules leave offering
+status unknown instead of claiming that catalog entries are scheduled.
+
+Graduate prerequisites retain their source text, with structured rules for the
+unambiguous course-code relationships. Transcript checks report known matches
+and gaps, but overall graduate eligibility remains `requires_verification`:
+admission background, equivalents, permission, and program rules are not fully
+modeled. Graduate pathway requests return these requirements and an explicit
+unresolved result; they do not traverse the undergraduate DAG or manufacture an
+undergraduate enrollment plan. The existing BFS/DFS pathway feature remains for
+undergraduate advising.
+
+A separate graduate visualization is generated automatically at startup:
+`agents2/graduate_prereq_graph.png`, with its structured records in
+`agents2/graduate_prereq_dag.json`. It includes all 73 catalog entries and draws
+only the 13 recorded graduate prerequisite relationships. Solid/dashed arrows
+distinguish required courses from alternatives; program-specific edges are labeled.
+Entries without recorded edges do not imply an absence of prerequisites. This
+graph is explanatory and does not enable automatic graduate pathway eligibility.
+It rebuilds when its source data changes. Regenerate it without Azure or SOC:
+
+```powershell
+python -m agents2.graduate_graph
+```
+
+The embedding collection name includes the catalog fingerprint and a schema
+version. First startup after this change builds a new index using the configured
+Azure embedding deployment; old collections are preserved. Future catalog edits
+create a fresh collection automatically. Offline tests do not call Azure or SOC.
+The per-turn JSONL metrics include `academic_profile` for separating research
+cohorts without changing existing CSV columns. This does not implement LinUCB.
+
 ## Repository layout
 
 | Path | Purpose |
@@ -78,7 +135,9 @@ terminal's working directory; absolute paths also work.
 | `agents2/paths.py` | Locations of current resources and outputs |
 | `agents2/query_schema.json` | Query interpretation schema |
 | `agents2/prereq_dag.json` | Cached prerequisite graph |
-| `rutgers_courses.json` | Course catalog for retrieval |
+| `rutgers_courses.json` | Undergraduate course catalog |
+| `rutgers_graduate_courses.json` | Graduate catalog with provenance and verification flags |
+| `agents2/academic_profile.py` | Academic-level boundaries and graduate prerequisite checks |
 | `query_logger3.py` | CSV logging and schema handling |
 | `query_log3.csv` | Current accumulated research results |
 | `chroma_db/` | Existing persistent semantic-search index |

@@ -1,0 +1,834 @@
+{
+  "16:198:500": {
+    "title": "Proseminar in Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-500-proseminar-in-computer-science"
+  },
+  "16:198:501": {
+    "title": "Mathematical Foundations of Data Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "198:205 (Discrete Math), 640:152 (Calculus II), 960:580 (Basic Probability) or equivalents",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-501-mathematical-foundations-of-data-science"
+  },
+  "16:198:503": {
+    "title": "Computational Thinking",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "incomplete_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-503-computational-thinking"
+  },
+  "16:198:504": {
+    "title": "Computational Modeling",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-504-computational-modeling"
+  },
+  "16:198:505": {
+    "title": "Computer Structures",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Current prerequisites require verification.",
+    "verification_status": "historical_2014_2016",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-505-computer-structures"
+  },
+  "16:198:507": {
+    "title": "Advanced Computer Architecture",
+    "and": [
+      "16:198:505"
+    ],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "16:198:505",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-507-advanced-computer-architecture"
+  },
+  "16:198:508": {
+    "title": "Formal Language and Automata",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-508-formal-language-and-automata"
+  },
+  "16:198:509": {
+    "title": "Foundations of Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Admission Requirements",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-509-foundations-of-computer-science"
+  },
+  "16:198:510": {
+    "title": "Numerical Analysis",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Current prerequisites require verification.",
+    "verification_status": "historical_2014_2016",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-510-numerical-analysis"
+  },
+  "16:198:512": {
+    "title": "Introduction to Data Structures and Algorithms",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Calculus and Discrete Math, Ch 0 of the Textbook and Chapters 1, 2, 3 of the reference below.",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-512-introduction-to-data-structures-and-algorithms"
+  },
+  "16:198:513": {
+    "title": "Design and Analysis of Data Structures and Algorithms",
+    "and": [
+      "16:198:512"
+    ],
+    "or_groups": [],
+    "applies_to_program": "masters",
+    "requires_verification": true,
+    "prerequisites_text": "Familiarity with Prim and Kruskal minimum spanning tree algorithms and Dijkstra shortest path algorithm.\nFor MS students 16:198:512 is a pre-requisite.\nPh.D. students can directly register for 513.",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-513-design-and-analysis-of-data-structures-and-algorithms"
+  },
+  "16:198:514": {
+    "title": "Design And Analysis Of Data Structures And Algorithms II",
+    "and": [
+      "16:198:513"
+    ],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "16:198:513",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-514-design-and-analysis-of-data-structures-and-algorithms-ii"
+  },
+  "16:198:515": {
+    "title": "Programming Languages And Compilers I",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "An undergraduate data structures and algorithms course, and an undergraduate compiler course (or permission of instructor)",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-515-programming-languages-and-compilers-i"
+  },
+  "16:198:516": {
+    "title": "Programming Languages And Compilers II",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-516-programming-languages-and-compilers-ii"
+  },
+  "16:198:518": {
+    "title": "Operating Systems Design",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-518-operating-systems-design"
+  },
+  "16:198:519": {
+    "title": "Operating System Theory",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Must have completed undergraduate classes equivalent to 01:198:416 and 01:198:211.  Graduate students without the 01:198:416 background should take 16:198:518 .",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-519-operating-system-theory"
+  },
+  "16:198:520": {
+    "title": "Introduction To Artificial Intelligence",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-520-introduction-to-artificial-intelligence"
+  },
+  "16:198:521": {
+    "title": "Linear Programming",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Current prerequisites require verification.",
+    "verification_status": "historical_2014_2016",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-521-linear-programming"
+  },
+  "16:198:522": {
+    "title": "Network and Combinatorial Optimization Algorithms",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Familiarity with discrete structures, probability theory and design and analysis of algorithms, e.g., as in 01:198:205, 01:198:206, 01:198:344 or 16:198:512 or 16:198:513; or an equivalent background, in which case, contact the Instructor for Special Permission to register. (Those with < B in 513: first obtain an SP number). Knowledge of LP duality is useful but not a prerequisite.",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-522-network-and-combinatorial-optimization-algorithms"
+  },
+  "16:198:523": {
+    "title": "Computer Graphics",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Current prerequisites require verification.",
+    "verification_status": "historical_2014_2016",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-523-computer-graphics"
+  },
+  "16:198:525": {
+    "title": "Brain-Inspired Computing",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "01:198:205 or 01:198:440",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-525-brain-inspired-computing"
+  },
+  "16:198:526": {
+    "title": "Data Interaction and Visual Analytics",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "* Topics:\nModule Number  | Module Name\n0  | Introduction to Data Interaction & Visual Analytics\n1  | Visual analytics Introduction, Plotly, Tree Maps, Barycentric Representations & Sample Project Presentations\n2  | Backend to Frontend Design & Tools, Libraries, Plots, and Interactions, Linear Regression\n3  | Introduction to Massive Computing and MapReduce\n3  | Hadoop Distributed File System (HDFS) and Sample Project Presentation\n4  | Streaming Data and Introduction to Apache Spark and CAP Theorem\n4.5  | Decision Trees and MapReduce\n5  | External Memory Algorithms, I/O Model​,\n5  | Graph Visualization\n   | Stage 1 Project Presentations\n5  | Force Directed Layout Algorithms\n6  | Graph Visualization Literature Review\nGraph Cities: Giga Graph Visualization\nGiga Graph Visualization (supplement)\n   | Spring Break\n7  | Data Analytics (Part I: Data Reduction and Dictionaries)\nJaccard Similarity, Conditional Probability\nData Analytics (Part II: Scalable Algorithms and Associative Statistics)\nPearson Coefficients, Estimators, Histograms\n   | Stage 2 Project Presentations\n7  | ANOVA Supplement\nNull Hypothesis, Sum of Squares, F Statistic, P Value, Two Sample t-test, Bonferroni Correction\n7  | Data Analytics (Part III: Multi-variate Regression)\nLinear Regression (Mean Square Error, Gradient Descent)\nLogistic Regression (Module Formulation, Update Rule, Newton-Rapson Algorithm, Generalized least squares estimator)\n8  | Data Management & Data Mining\n9  | Time and Space & Infrastructure\n10  | Perception and Cognitive aspects, Evaluation & Recommendations\nReview  | Final Review\n   | Final Project Presentations and Best Class Project Announcements",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-526-data-interaction-and-visual-analytics"
+  },
+  "16:198:527": {
+    "title": "Database Systems for Data Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "This course is suitable for first year M.Sc. Students.",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-527-database-systems-for-data-science"
+  },
+  "16:198:529": {
+    "title": "Computational Geometry",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-529-computational-geometry"
+  },
+  "16:198:530": {
+    "title": "Principles of Artificial Intelligence",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "An undergraduate course in artificial intelligence.",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-530-principles-of-artificial-intelligence"
+  },
+  "16:198:532": {
+    "title": "Foundations Of Knowledge Representation",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Current prerequisites require verification.",
+    "verification_status": "historical_2014_2016",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-532-foundations-of-knowledge-representation"
+  },
+  "16:198:533": {
+    "title": "Natural Language Processing",
+    "and": [
+      "16:198:530"
+    ],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Either 198:530 or permission of the instructor.",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-533-natural-language-processing"
+  },
+  "16:198:534": {
+    "title": "Computer Vision",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Current prerequisites require verification.",
+    "verification_status": "historical_2014_2016",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-534-computer-vision"
+  },
+  "16:198:535": {
+    "title": "Pattern Recognition: Theory and Applications",
+    "and": [],
+    "or_groups": [
+      [
+        "16:198:520",
+        "16:198:530"
+      ]
+    ],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "16:198:530 OR 16:198:520",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-535-pattern-recognition-theory-and-applications"
+  },
+  "16:198:536": {
+    "title": "Machine Learning",
+    "and": [],
+    "or_groups": [
+      [
+        "16:198:520",
+        "16:198:530"
+      ]
+    ],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "16:198:530 or 16:198:520",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-536-machine-learning"
+  },
+  "16:198:538": {
+    "title": "Complexity Of Computation",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "16:198:513 and 16:198:509 (or equivalent) are useful.",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-538-complexity-of-computation"
+  },
+  "16:198:539": {
+    "title": "Database Management Systems",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-539-database-systems-implementation"
+  },
+  "16:198:540": {
+    "title": "Combinatorial Methods In Complexity Theory",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Current prerequisites require verification.",
+    "verification_status": "historical_2014_2016",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-540-combinatorial-methods-in-complexity-theory"
+  },
+  "16:198:541": {
+    "title": "Advanced Data Management",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "16:198:513 or 16:198:512;\nknowledge of logic (as can be gained in 16:198:509 );\nan undergraduate-level database course.",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-541-database-systems"
+  },
+  "16:198:543": {
+    "title": "Massive Data Storage, Retrieval and Deep Learning",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Basic familiarity with data structures and algorithms (like the one provided in CS512), mathematical foundations and probability theory (CS501), and data base foundations (like CS527 and/or CS539). Some of the tools to be used require knowledge of Python, C++, Java, or Scala. Other examples will be based on Apache Spark. However, prior knowledge of Spark (using Scala) is not required but certainly it will not be harmful.",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-543-massive-data-storage-retrieval-and-deep-learning"
+  },
+  "16:198:544": {
+    "title": "Computer Security",
+    "and": [
+      "16:198:518"
+    ],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "16:198:518",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-544-computer-security"
+  },
+  "16:198:545": {
+    "title": "Distributed Systems",
+    "and": [
+      "16:198:519"
+    ],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "16:198:519",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-545-distributed-systems"
+  },
+  "16:198:546": {
+    "title": "Computer System Security",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-546-computer-system-security"
+  },
+  "16:198:547": {
+    "title": "The Security and Dependability of Distributed Systems",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "No specific courses are required. But undergraduate level exposure to distributed computing, discrete mathematics and theory of algorithms is expected.",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-547-the-security-and-dependability-of-distributed-systems"
+  },
+  "16:198:549": {
+    "title": "Artificial Intelligence for Visual Computing",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Proficiency in one or more of the following areas:\n\n    * Artificial Intelligence\n    * Computer Graphics\n    * Computer Vision\n    * Machine Learning\n    * Robotics",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-549-artificial-intelligence-for-visual-computing"
+  },
+  "16:198:550": {
+    "title": "Massive Data Mining",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "CS 512 or CS 513 (Fundamental Algorithms)\n    * Linear Algebra, Basic Probability (Moments, Typical Distributions, MLE)",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-550-massive-data-mining"
+  },
+  "16:198:551": {
+    "title": "Ubiquitous Computing",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/ubiquitous-computing"
+  },
+  "16:198:552": {
+    "title": "Computer Networks",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-552-computer-networks"
+  },
+  "16:198:553": {
+    "title": "Design of Internet Services",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-553-design-of-internet-services"
+  },
+  "16:198:554": {
+    "title": "Capstone Project I",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Languages:  C/C++, Java, JavaScript, Python\n\nCS554-Capstone I (Interface Concentration): 16:198:512 or 16:198:513 (Algorithms), 16:198:526 (DIVA), 16:198:527 or 16:198:539 (Data Bases or equivalent).  A class on Computer Graphics and Vision (01:198:428 or equivalent) may be useful but it is not required.",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-554-capstone-project-i"
+  },
+  "16:198:555": {
+    "title": "Capstone Project II",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Languages:  C/C++, Java, JavaScript, Python\n16:198:554 , 16:198:543  (Massive Data Storage and Retrieval), 16:198: 550 (Massive Data Mining)/16:198: 535 (Pattern Recognition) or 16:198: 550 (Massive Data Mining)/16:198:536 (Machine Learning) , or 16:198:535 /16:198:536 (Pattern Recognition-Machine Learning)",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-555-capstone-project-ii"
+  },
+  "16:198:558": {
+    "title": "Quantum Computing: Programs and Systems",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "Background in Python, computer architecture, algorithms, linear algebra, and probability; verify with instructor.",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-558-quantum-computing-programs-and-systems"
+  },
+  "16:198:560": {
+    "title": "Introduction to Computational Robotics",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-560-introduction-to-computational-robotics"
+  },
+  "16:198:562": {
+    "title": "Advanced Robotics",
+    "and": [
+      "16:198:560"
+    ],
+    "or_groups": [
+      [
+        "16:198:520",
+        "16:198:536"
+      ]
+    ],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "16:198:520/536, 16:198:560",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-562-advanced-robotics"
+  },
+  "16:198:580": {
+    "title": "Topics In Computers In Biomedicine",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "16:198:520 or 16:198:513, depending on the semester, or permission of the instructor.",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-580-topics-in-computers-in-biomedicine"
+  },
+  "16:198:583": {
+    "title": "Topics In Software Design",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-583-topics-in-software-design"
+  },
+  "16:198:590": {
+    "title": "Socially Cognizant Robotics",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/socially-cognizant-robotics"
+  },
+  "16:198:596": {
+    "title": "Topics In The Foundations Of Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-596-topics-in-the-foundations-of-computer-science"
+  },
+  "16:198:598": {
+    "title": "Topics In Artificial Intelligence",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-598-topics-in-artificial-intelligence"
+  },
+  "16:198:601": {
+    "title": "Selected Problems In Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-601-selected-problems-in-computer-science"
+  },
+  "16:198:602": {
+    "title": "Selected Problems In Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-602-selected-problems-in-computer-science"
+  },
+  "16:198:603": {
+    "title": "Selected Problems In Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-603-selected-problems-in-computer-science"
+  },
+  "16:198:604": {
+    "title": "Selected Problems In Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-604-selected-problems-in-computer-science"
+  },
+  "16:198:605": {
+    "title": "Selected Problems In Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-605-selected-problems-in-computer-science"
+  },
+  "16:198:606": {
+    "title": "Selected Problems In Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-606-selected-problems-in-computer-science"
+  },
+  "16:198:607": {
+    "title": "Problems In Numerical Methods",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-607-problems-in-numerical-methods"
+  },
+  "16:198:608": {
+    "title": "Problems In Numerical Methods",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-608-problems-in-numerical-methods"
+  },
+  "16:198:671": {
+    "title": "Seminar in Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-671-seminar-in-computer-science"
+  },
+  "16:198:672": {
+    "title": "Seminar in Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-672-seminar-in-computer-science"
+  },
+  "16:198:673": {
+    "title": "Seminar in Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-673-seminar-in-computer-science"
+  },
+  "16:198:674": {
+    "title": "Seminar in Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": true,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-674-seminar-in-computer-science"
+  },
+  "16:198:701": {
+    "title": "Research In Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-701-research-in-computer-science"
+  },
+  "16:198:702": {
+    "title": "Research In Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-702-research-in-computer-science"
+  },
+  "16:198:703": {
+    "title": "Research In Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-703-research-in-computer-science"
+  },
+  "16:198:704": {
+    "title": "Research In Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-704-research-in-computer-science"
+  },
+  "16:198:705": {
+    "title": "Research in Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-705-research-in-computer-science"
+  },
+  "16:198:706": {
+    "title": "Research in Computer Science",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-706-research-in-computer-science"
+  },
+  "16:198:800": {
+    "title": "Matriculation Continued",
+    "and": [],
+    "or_groups": [],
+    "applies_to_program": null,
+    "requires_verification": true,
+    "prerequisites_text": "",
+    "verification_status": "department_listing",
+    "recommendable": false,
+    "source_url": "https://www.cs.rutgers.edu/academics/graduate/m-s-program/course-synopses/course-details/16-198-800-matriculation-continued"
+  }
+}

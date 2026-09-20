@@ -12,6 +12,7 @@ from driver3 import ParserExecutor
 class ClarificationTests(unittest.IsolatedAsyncioTestCase):
     def pending(self, query="How can I take machine learning", transcript=None, missing=None):
         state = ConversationState(transcript_data=transcript)
+        state.preferences["academic_level"] = "undergraduate"
         state.request_clarification(query, {"intent": "prerequisite_check", "entities": {
             "interests": ["AI"], "target_course": "machine learning"}}, missing or ["target_course"])
         return state

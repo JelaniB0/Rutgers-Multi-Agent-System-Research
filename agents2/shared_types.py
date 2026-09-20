@@ -12,6 +12,7 @@ from enum import Enum
 from copy import deepcopy
 from .advising_scope import clean_parsed_scope, without_campus, mentions_campus
 from .inference_metrics import InferenceMetrics
+from .academic_profile import normalize_level, student_level
 
 
 class ConversationState:
@@ -68,7 +69,8 @@ class ConversationState:
         entities = deepcopy(parsed.get("entities", {}))
         fields = missing_fields or parsed.get("missing_critical_info", [])
         allowed = {"target_course", "specific_courses", "interests", "year", "career_path",
-                   "credit_hours", "difficulty_preference", "time_constraints", "file_path"}
+                   "credit_hours", "difficulty_preference", "time_constraints", "file_path",
+                   "academic_level", "graduate_program"}
         fields = [f for f in fields if isinstance(f, str) and f in allowed] if isinstance(fields, list) else []
         if not fields:
             fields = ["target_course"] if parsed.get("intent") in ("prerequisite_check", "course_info") else ["interests"]
@@ -144,7 +146,7 @@ class ConversationState:
             setattr(self, key, list(unique.values())[-12:])
         preferences = updates.get("preferences", {})
         if isinstance(preferences, dict):
-            for key in ("difficulty_preference", "gpa_priority", "credit_hours", "time_constraints", "year"):
+            for key in ("difficulty_preference", "gpa_priority", "credit_hours", "time_constraints", "year", "academic_level", "graduate_program"):
                 if key not in preferences:
                     continue
                 value = preferences[key]
@@ -152,6 +154,11 @@ class ConversationState:
                     self.preferences.pop(key, None)
                 elif isinstance(value, (str, int, float, bool)):
                     self.preferences[key] = value[:160] if isinstance(value, str) else value
+            explicit = normalize_level(preferences.get("academic_level")) or normalize_level(preferences.get("year"))
+            if explicit:
+                self.preferences["academic_level"] = explicit
+                if explicit == "undergraduate":
+                    self.preferences.pop("graduate_program", None)
 
     def remember_results(self, kind, courses):
         """Bounded, ordered references, not cached eligibility verdicts."""
@@ -185,8 +192,35 @@ class ConversationState:
 
     def enrich_parsed_query(self, parsed):
         """Apply updates before inheriting defaults; resolve explicit parser references."""
+        old_level = student_level(self)
+        old_program = self.preferences.get("graduate_program")
         self.apply_memory_updates(parsed.get("memory_updates"))
         entities = parsed.setdefault("entities", {})
+        explicit_level = normalize_level(entities.get("academic_level")) or normalize_level(entities.get("year"))
+        if explicit_level:
+            self.preferences["academic_level"] = explicit_level
+        if explicit_level != "undergraduate" and entities.get("graduate_program") in ("masters", "phd", "msds"):
+            self.preferences["graduate_program"] = entities["graduate_program"]
+            self.preferences["academic_level"] = "graduate"
+        level = student_level(self)
+        if level != old_level or old_program != self.preferences.get("graduate_program"):
+            self.last_recommendations = []
+            self.last_lookup_courses = []
+            self.last_pathway_targets = []
+            self.latest_result_kind = None
+            self.resolved_courses.clear()
+            self.extracted_entities.clear()
+            if normalize_level(self.preferences.get("year")) != level:
+                self.preferences.pop("year", None)
+            if level != "graduate":
+                self.preferences.pop("graduate_program", None)
+        if level:
+            self.preferences["academic_level"] = level
+            entities["academic_level"] = level
+            if normalize_level(entities.get("year")) == level:
+                self.preferences["year"] = entities["year"]
+            if level == "undergraduate":
+                entities.pop("graduate_program", None)
         defaults = dict(self.preferences, interests=self.interests, career_path="; ".join(self.goals))
         for key, value in defaults.items():
             if entities.get(key) in (None, "", []):
@@ -248,6 +282,8 @@ class ConversationState:
             "user_query": self.user_query,
             "conversation_history": self.conversation_history,
             "session_id": self.session_id,
+            "academic_profile": {"academic_level": student_level(self),
+                                 "graduate_program": self.preferences.get("graduate_program")},
             "transcript_data": self.transcript_data
         }
     

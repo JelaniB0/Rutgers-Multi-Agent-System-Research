@@ -116,8 +116,9 @@ class MemoryFlowTests(unittest.IsolatedAsyncioTestCase):
 
     async def test_referenced_candidates_reuse_catalog_without_broad_retrieval(self):
         state = ConversationState()
+        state.preferences["academic_level"] = "undergraduate"
         state.resolved_semester = {"term": "test"}
-        agent = SimpleNamespace(courses_data=[{"code": c} for c in ["A", "B", "old"]], model="test",
+        agent = SimpleNamespace(courses_data=[{"code": c, "academic_level": "undergraduate"} for c in ["A", "B", "old"]], model="test",
                                 _rag_retrieve=AsyncMock(), _fetch_soc_courses=AsyncMock(return_value=None))
         parsed = {"entities": {}, "reference_courses": [{"code": "B"}, {"code": "A"}]}
         result = await DataAgent.fetch_courses(agent, parsed, state)

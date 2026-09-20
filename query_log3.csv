@@ -1258,3 +1258,19 @@ Future option to unlock:
 - Computer Security (01:198:419): Not currently eligible because it requires one of 01:198:416 (Operating Systems Design) or 01:198:352 (Internet Technology). Taking either 416 or 352 would open 419.
 
 If you want alternatives within theory (e.g., complexity, PL/compilers, or math-heavy electives), I can refine this further based on what you’d like to emphasize.",data_fetch -> constraint_full -> planning,parser|orchestrator|data|constraint|planning,"parser:LLM,query_schema.json|orchestrator:LLM|data:rutgers_courses.json|constraint:LLM|planning:LLM",22510,12745,yes,NULL,no,,
+2026-09-20T16:10:42.197317,2026-09-20T16:20:45,164.01,"I'm interested in systems programming, what should I take?","Based on your interest in systems programming and your transcript, here are the best next steps:
+
+1) Systems Programming (01:198:214)
+   Why: Hands-on C-level programming, how programs map to hardware, and tooling/automation—core systems skills.
+   Prerequisites: 01:198:112, 01:640:152. Eligibility: our check shows you’re eligible.
+
+2) Principles of Programming Languages (01:198:314)
+   Why: Strengthens understanding of memory, pointers, compilers/interpreters, and language runtimes—very useful for systems work.
+   Prerequisites: 01:198:205, 01:198:211, 01:640:152. Eligibility: our check shows you’re eligible.
+
+Future systems options and how to qualify:
+- Operating Systems Design (01:198:416): Requires 01:198:214 OR both 14:332:331 and 14:332:351. After 416, you’ll be set for Distributed Systems (01:198:417) which requires 416.
+- Compilers (01:198:415): Requires 01:198:314 and 14:332:331.
+- Database Systems Implementation (01:198:437): Requires 01:198:214 and 01:198:336.
+
+If you want, I can map a shortest path to reach Operating Systems and Distributed Systems based on your current plan.",data_fetch -> constraint_full -> planning,parser|orchestrator|data|constraint|planning,"parser:LLM,query_schema.json|orchestrator:LLM|data:rutgers_courses.json|constraint:LLM|planning:LLM",27785,19334,NULL,NULL,NULL,,

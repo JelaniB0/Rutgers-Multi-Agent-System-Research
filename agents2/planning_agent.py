@@ -11,6 +11,7 @@ from agent_framework import ChatAgent, AgentThread
 from agent_framework.openai import OpenAIResponsesClient
  
 from .shared_types import AgentResponse, ConversationState
+from .academic_profile import allowed_course
  
  
 class PlanningAgent(ChatAgent):
@@ -80,6 +81,7 @@ class PlanningAgent(ChatAgent):
             AgentResponse with ranked_courses, ranking_summary, and self_check_note
         """
         try:
+            courses = [c for c in courses if allowed_course(c, state, recommendations=True, entities=parsed_data.get("entities"))]
             if not courses:
                 return AgentResponse(
                     success=False,
@@ -152,7 +154,8 @@ class PlanningAgent(ChatAgent):
 
         # courses_json = json.dumps({k: v for k, v in parsed_data.items() if v not in (None, [], {}, "")}, indent=2)
 
-        RANKING_FIELDS = {"code", "title", "description", "prerequisites", "credits", "topics", "constraint_check"}
+        RANKING_FIELDS = {"code", "title", "description", "prerequisites", "credits", "topics", "constraint_check",
+                          "academic_level", "course_type", "verification_status", "prerequisite_status", "allowed_programs"}
         courses_to_rank = [
             {k: v for k, v in c.items() if k in RANKING_FIELDS}
             for c in courses[:max_results + 2]
@@ -180,6 +183,11 @@ class PlanningAgent(ChatAgent):
 
 
         TASK: Select and rank the TOP {max_results} courses for this student.
+        Academic level: {entities.get('academic_level') or state.preferences.get('academic_level')}.
+        Never recommend across academic levels, including as prerequisite enrollment steps.
+        Graduate prerequisite_status=requires_verification or eligible=null means eligibility
+        is UNKNOWN even with a transcript. Rank for topic fit, explicitly retain that caveat,
+        and do not label these courses immediately available or fully eligible.
 
         HARD RULES — apply these before anything else:
         1. DEDUPLICATION: If multiple courses share the same title (e.g. several sections
@@ -278,6 +286,8 @@ class PlanningAgent(ChatAgent):
                         r for r in parsed["ranked_courses"]
                         if r.get("course_code") in valid_codes
                     ]
+                    parsed["not_recommended"] = [r for r in parsed.get("not_recommended", [])
+                                                 if r.get("course_code") in valid_codes]
                     return parsed
                 return {}
             else:

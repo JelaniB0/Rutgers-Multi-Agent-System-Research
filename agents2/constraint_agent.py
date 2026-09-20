@@ -27,6 +27,7 @@ from typing import Dict, Any, Optional, Tuple, List
 from agent_framework import ChatAgent
 from agent_framework.openai import OpenAIResponsesClient
 from .shared_types import AgentResponse, ConversationState, ConstraintViolation
+from .academic_profile import allowed_course, course_level, graduate_check
 from .dag_builder import batch_check_eligibility
 from .paths import DAG_FILE
 
@@ -150,9 +151,16 @@ class ConstraintAgent(ChatAgent):
             ineligible: List[Dict] = []
             violations: List[ConstraintViolation] = []
 
-            prereq_results = await self._batch_check_prereqs(courses, completed, in_progress)
+            regular = [c for c in courses if allowed_course(c, state) and course_level(c) != "graduate"]
+            prereq_results = await self._batch_check_prereqs(regular, completed, in_progress) if regular else {}
+            unverified = []
 
             for course in courses:
+                if not allowed_course(course, state) or course_level(course) == "graduate":
+                    result = graduate_check(course, state)
+                    annotated = dict(course, constraint_check=result)
+                    (ineligible if result["eligible"] is False else unverified).append(annotated)
+                    continue
                 prereq_result = prereq_results.get(course.get("code", ""), self._safe_default())
                 # print(f"[DEBUG constraint] {course.get('code')} eligible={prereq_result['eligible']} unmet={prereq_result['unmet_prerequisites']}")
                 standing_result = self._check_standing(
@@ -203,6 +211,8 @@ class ConstraintAgent(ChatAgent):
             # builds summary of findings. 
 
             summary = self._build_summary(eligible, ineligible, violations)
+            if unverified:
+                summary = f"{len(eligible)} verified, {len(ineligible)} blocked, {len(unverified)} require graduate eligibility verification."
             # print(
             #     f"[ConstraintAgent] Validated {len(courses)} courses — "
             #     f"{len(eligible)} prereq-eligible, {len(ineligible)} ineligible"
@@ -213,6 +223,7 @@ class ConstraintAgent(ChatAgent):
                 data={
                     "eligible_courses": eligible, 
                     "ineligible_courses": ineligible,
+                    "unverified_courses": unverified,
                     "validation_summary": summary,
                     "violations": [v.to_dict() for v in violations],
                 },
@@ -248,6 +259,8 @@ class ConstraintAgent(ChatAgent):
         """
 
         try:
+            if not allowed_course(course, state) or course_level(course) == "graduate":
+                return AgentResponse(success=True, data=graduate_check(course, state))
             completed, in_progress, completed_credits, in_progress_credits = (
                 self._get_student_data(state)
             )
@@ -445,7 +458,7 @@ class ConstraintAgent(ChatAgent):
  
     def _extract_course_level(self, course_code: str) -> Optional[int]:
         """Extract hundreds digit from course code e.g. "01:198:314" → 3"""
-        match = re.search(r':(\d{3})(?:$|[:\s])', course_code)
+        match = re.search(r':(\d{3})$', course_code)
         if match:
             return int(match.group(1)) // 100
         return None
@@ -523,6 +536,8 @@ class ConstraintAgent(ChatAgent):
         prereq_violations = [v for v in violations if v["constraint_type"] == "prerequisite"]
  
         eligible_str   = ", ".join(c.get("code", "") for c in eligible)   or "None"
+        unverified_str = "; ".join(c.get("code", "") + ": " + c.get("constraint_check", {}).get("standing_note", "Requires verification")
+                                   for c in validation_data.get("unverified_courses", [])) or "None"
         ineligible_str = ", ".join(c.get("code", "") for c in ineligible) or "None"
  
         penalty_lines = ""
@@ -542,6 +557,7 @@ class ConstraintAgent(ChatAgent):
         return (
             f"PREREQUISITE & STANDING VALIDATION:\n"
             f"  Prereq-Eligible:  {eligible_str}\n"
+            f"  Eligibility UNKNOWN: {unverified_str}\n"
             f"  Missing Prereqs:  {ineligible_str}\n"
             f"  Summary:          {validation_data.get('validation_summary', '')}\n"
             + (f"  Prereq Violations:\n{violation_lines}\n" if violation_lines else "")
